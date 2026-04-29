@@ -6,47 +6,50 @@
 <title>Cipasa Urbanismo — Brandbook 35 Anos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Work Sans (UI/ads) + Montserrat (editorial/headings) — verificado no site cipasa.com -->
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,700;1,900&family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <style>
 /* ── Design tokens — Cipasa Urbanismo 35 Anos ── */
-/* Cores extraídas diretamente do SVG original (group-35622.svg) */
+/* Verificados: SVG original logo + inspeção CSS cipasa.com + criativos PDF */
 :root {
-  /* Cores primárias — extraídas do SVG original */
-  --verde-floresta:   #004D36;   /* dark bg, headlines, slides escuros */
-  --verde-corpo:      #005A45;   /* CIPASA URBANISMO wordmark — texto principal */
-  --verde-lime:       #62BB46;   /* anel externo do ícone — accent primário */
-  --verde-35anos:     #20592D;   /* fill do 35 anos mark — verde mais escuro */
-  --verde-brilho:     #3DAF1E;   /* "diferença" em peças muito escuras */
-  --verde-claro:      #A8D98A;   /* gradient stop, slides claros */
-  --verde-pale:       #E8F5E0;   /* backgrounds de seção claros */
-  --olive:            #B5C98A;   /* ribbons decorativos outdoor/folder */
+  /* Verdes primários — SVG + site */
+  --verde-lime:    #62BB46;   /* anel ícone · CTA float · badges · accent */
+  --verde-corpo:   #005A45;   /* CIPASA wordmark · CTAs outline · footer ←SVG+site */
+  --verde-35anos:  #20592D;   /* badge 35 anos mark ←SVG */
+  --verde-dark:    #112A25;   /* headings Montserrat site · bottom bar ←site */
+  --verde-hover:   #173F35;   /* hover states ←site */
+  --verde-icon:    #407A6B;   /* ícones secundários ←site */
 
-  /* Paisagem do ícone — 4 camadas (uso restrito ao ícone) */
-  --icon-bruma:       #B0CAC1;   /* camada superior da paisagem */
-  --icon-névoa:       #D8E6DC;   /* camada clara (meio) */
-  --icon-terra:       #407B6B;   /* camada inferior (terra) */
-  --icon-campo:       #82ADA1;   /* camada de fundo (campo) */
+  /* Paisagem do ícone — uso restrito ao símbolo ←SVG */
+  --icon-bruma:    #B0CAC1;
+  --icon-nevoa:    #D8E6DC;
+  --icon-terra:    #407B6B;
+  --icon-campo:    #82ADA1;
 
-  /* Neutros */
-  --off-white:        #F5F6F2;   /* page background */
-  --branco:           #FFFFFF;
-  --cinza-leve:       #EDF0EC;
-  --cinza-medio:      #6B7C6B;
-  --ink:              #1A2A1A;   /* quase-preto */
+  /* Neutros — site cipasa.com */
+  --off-white:     #F8FAF9;   /* seções alternadas do site */
+  --surface:       #F5F5F5;   /* inputs */
+  --branco:        #FFFFFF;
+  --ink:           #2C2C2C;   /* texto conteúdo primário ←site */
+  --muted:         #555454;   /* footer, texto secundário ←site */
+  --cinza-leve:    #EDF0EC;   /* backgrounds de card */
+  --olive:         #B5C98A;   /* ribbons outdoor/folder */
+  --verde-pale:    #E8F5E0;   /* slides claros */
 
-  /* Tipografia */
-  --font-brand:  'Montserrat', sans-serif;
-  --font-body:   'Inter', sans-serif;
+  /* Tipografia — Work Sans primária, Montserrat editorial */
+  --font-ui:       'Work Sans', sans-serif;    /* site, ads, UI */
+  --font-display:  'Montserrat', sans-serif;   /* headings, key visual */
 
-  /* Espaçamento */
-  --max: 1180px;
-  --ease: cubic-bezier(.22,1,.36,1);
+  /* Layout */
+  --container:     1250px;    /* max-width verificado no site */
+  --max:           1180px;
+  --ease:          cubic-bezier(.22,1,.36,1);
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  font-family:var(--font-body);
+  font-family:var(--font-ui);
   background:var(--off-white);
   color:var(--ink);
   font-size:16px;
@@ -559,7 +562,7 @@ footer a:hover{color:var(--verde-lime)}
     <a href="#iconografia">Iconografia</a>
     <a href="#aplicacoes">Aplicações</a>
     <a href="#merch">Merch</a>
-    <a href="#rules">Do's &amp; Don'ts</a>
+    <a href="#criativos-ad">Criativos Ad</a><a href="#rules">Do's &amp; Don'ts</a>
   </div>
 </nav>
 
@@ -770,130 +773,65 @@ footer a:hover{color:var(--verde-lime)}
     <h2 class="sec-title">Paleta Corporativa</h2>
     <p class="sec-desc">A identidade Cipasa é construída sobre verdes — do floresta profundo ao lime vibrante. Nenhuma cor concorrente. A palavra "diferença" sempre em lime ou em dark green, dependendo do fundo.</p>
 
-    <p class="palette-label">Verdes corporativos — hierarquia</p>
-    <div class="swatches">
-      <div class="swatch">
-        <div class="swatch-color" style="background:#004D36"></div>
-        <div class="swatch-meta">
-          <div class="swatch-name">verde-floresta</div>
-          <div class="swatch-hex">#004D36</div>
-          <div class="swatch-use">Backgrounds escuros, headlines institucionais, dark cards</div>
-        </div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-color" style="background:#005A45"></div>
-        <div class="swatch-meta">
-          <div class="swatch-name">verde-corpo</div>
-          <div class="swatch-hex">#005A45</div>
-          <div class="swatch-use">Texto principal, logo, selos, bordas de badges</div>
-        </div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-color" style="background:#62BB46"></div>
-        <div class="swatch-meta">
-          <div class="swatch-name">verde-lime</div>
-          <div class="swatch-hex">#62BB46</div>
-          <div class="swatch-use">Logo Cipasa, "diferença" sobre dark, iconografia filled, accent</div>
-        </div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-color" style="background:#3DAF1E"></div>
-        <div class="swatch-meta">
-          <div class="swatch-name">verde-brilho</div>
-          <div class="swatch-hex">#3DAF1E</div>
-          <div class="swatch-use">"diferença" em peças escuras (camiseta, slides forest)</div>
-        </div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-color" style="background:#A8D98A"></div>
-        <div class="swatch-meta">
-          <div class="swatch-name">verde-claro</div>
-          <div class="swatch-hex">#A8D98A</div>
-          <div class="swatch-use">Gradientes, backgrounds de slides internos claros</div>
-        </div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-color" style="background:#E8F5E0"></div>
-        <div class="swatch-meta">
-          <div class="swatch-name">verde-pale</div>
-          <div class="swatch-hex">#E8F5E0</div>
-          <div class="swatch-use">Slide backgrounds, seções claras, base de cards internos</div>
-        </div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-color" style="background:#B5C98A"></div>
-        <div class="swatch-meta">
-          <div class="swatch-name">olive</div>
-          <div class="swatch-hex">#B5C98A</div>
-          <div class="swatch-use">Ribbons decorativos (outdoor, folder), elemento de marca</div>
-        </div>
-      </div>
+    <!-- Bug de identidade documentado -->
+    <div style="margin-bottom:32px;padding:16px 20px;background:rgba(200,40,20,.06);border-radius:12px;border:1.5px solid rgba(200,40,20,.14);display:flex;gap:14px;align-items:flex-start">
+      <span style="font-size:1.1rem;flex-shrink:0">⚠️</span>
+      <div><p style="font-size:.875rem;font-weight:700;color:#b83218;margin-bottom:4px">Bug documentado — cipasa.com</p><p style="font-size:.875rem;color:var(--muted);line-height:1.55"><code style="background:rgba(200,40,20,.08);color:#b83218">#1976D2</code> (azul MUI padrão) aparece <strong style="color:var(--ink)">428×</strong> no site em links, ícones e botões. Corrigir com <code>palette.primary.main: '#005A45'</code> no ThemeProvider.</p></div>
     </div>
 
-    <p class="palette-label">Neutros</p>
+    <p class="palette-label">Verdes — SVG original (↙ logo) + inspeção CSS cipasa.com</p>
     <div class="swatches">
-      <div class="swatch">
-        <div class="swatch-color" style="background:#FFFFFF;outline:1px solid rgba(0,0,0,.06)"></div>
-        <div class="swatch-meta">
-          <div class="swatch-name">branco</div>
-          <div class="swatch-hex">#FFFFFF</div>
-          <div class="swatch-use">Texto sobre dark, logo sobre foto, card backgrounds</div>
-        </div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-color" style="background:#F5F6F2;outline:1px solid rgba(0,0,0,.05)"></div>
-        <div class="swatch-meta">
-          <div class="swatch-name">off-white</div>
-          <div class="swatch-hex">#F5F6F2</div>
-          <div class="swatch-use">Background geral, apresentações, base de cards</div>
-        </div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-color" style="background:#1A2A1A"></div>
-        <div class="swatch-meta">
-          <div class="swatch-name">ink</div>
-          <div class="swatch-hex">#1A2A1A</div>
-          <div class="swatch-use">Texto corrido sobre fundo claro, quase-preto</div>
-        </div>
-      </div>
+      <div class="swatch"><div class="swatch-color" style="background:#62BB46"></div><div class="swatch-meta"><div class="swatch-name">verde-lime</div><div class="swatch-hex">#62BB46</div><div class="swatch-use">Anel ícone · CTA float · badges filled · "diferença" em dark</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#005A45"></div><div class="swatch-meta"><div class="swatch-name">verde-corpo</div><div class="swatch-hex">#005A45</div><div class="swatch-use">Wordmark · CTAs outline · links footer ←SVG+site</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#20592D"></div><div class="swatch-meta"><div class="swatch-name">verde-35anos</div><div class="swatch-hex">#20592D</div><div class="swatch-use">Badge 35 anos mark exclusivo ←SVG</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#112A25"></div><div class="swatch-meta"><div class="swatch-name">verde-dark</div><div class="swatch-hex">#112A25</div><div class="swatch-use">Headings Montserrat · bottom bar ←site</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#173F35"></div><div class="swatch-meta"><div class="swatch-name">verde-hover</div><div class="swatch-hex">#173F35</div><div class="swatch-use">Hover states links e botões ←site</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#407A6B"></div><div class="swatch-meta"><div class="swatch-name">verde-icon</div><div class="swatch-hex">#407A6B</div><div class="swatch-use">Ícones secundários ←site</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#B5C98A"></div><div class="swatch-meta"><div class="swatch-name">olive</div><div class="swatch-hex">#B5C98A</div><div class="swatch-use">Ribbons horizontais outdoor e impressos</div></div></div>
+    </div>
+    <p class="palette-label">Neutros — inspeção CSS cipasa.com</p>
+    <div class="swatches">
+      <div class="swatch"><div class="swatch-color" style="background:#FFFFFF;outline:1px solid rgba(0,0,0,.06)"></div><div class="swatch-meta"><div class="swatch-name">branco</div><div class="swatch-hex">#FFFFFF</div><div class="swatch-use">Texto sobre dark · card bg · logo</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#F8FAF9;outline:1px solid rgba(0,0,0,.05)"></div><div class="swatch-meta"><div class="swatch-name">off-white</div><div class="swatch-hex">#F8FAF9</div><div class="swatch-use">Seções alternadas do site ←site</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#F5F5F5;outline:1px solid rgba(0,0,0,.04)"></div><div class="swatch-meta"><div class="swatch-name">surface</div><div class="swatch-hex">#F5F5F5</div><div class="swatch-use">Inputs e superfícies leves ←site</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#2C2C2C"></div><div class="swatch-meta"><div class="swatch-name">ink</div><div class="swatch-hex">#2C2C2C</div><div class="swatch-use">Texto de conteúdo primário ←site</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#555454"></div><div class="swatch-meta"><div class="swatch-name">texto-muted</div><div class="swatch-hex">#555454</div><div class="swatch-use">Links footer · texto secundário ←site</div></div></div>
     </div>
 
     <div style="padding:24px 28px;background:var(--branco);border-radius:14px;border:1px solid rgba(0,77,54,.08);margin-top:8px">
-      <h3 style="font-size:.9375rem;font-weight:700;color:var(--ink);margin-bottom:16px">Regra de "diferença"</h3>
-      <div style="display:flex;flex-wrap:wrap;gap:16px">
-        <div style="padding:16px 20px;background:var(--verde-floresta);border-radius:10px;min-width:200px">
-          <p style="font-size:11px;color:rgba(255,255,255,.4);margin-bottom:8px;font-weight:600;text-transform:uppercase;letter-spacing:.08em">Em fundo escuro</p>
-          <p style="font-family:var(--font-brand);font-weight:900;font-style:italic;font-size:1.75rem;color:#62BB46;line-height:1">diferença</p>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.4);margin-top:6px">Lime <code style="color:rgba(255,255,255,.6);background:rgba(255,255,255,.1)">#62BB46</code> ou brilho <code style="color:rgba(255,255,255,.6);background:rgba(255,255,255,.1)">#3DAF1E</code></p>
+      <h3 style="font-size:.9375rem;font-weight:700;color:var(--ink);margin-bottom:16px">Regra de "diferença" — 3 contextos</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:14px">
+        <div style="padding:18px 20px;background:#112A25;border-radius:10px;min-width:200px;flex:1">
+          <p style="font-size:10px;color:rgba(255,255,255,.4);margin-bottom:8px;font-weight:700;text-transform:uppercase;letter-spacing:.1em">Ads/produto — Work Sans 900</p>
+          <p style="font-family:'Work Sans',sans-serif;font-weight:900;font-size:1.875rem;color:#FFFFFF;line-height:1">diferença</p>
+          <p style="font-size:.75rem;color:rgba(255,255,255,.4);margin-top:6px">Branco sobre foto — WhatsApp, feed</p>
         </div>
-        <div style="padding:16px 20px;background:var(--verde-pale);border-radius:10px;min-width:200px">
-          <p style="font-size:11px;color:var(--cinza-medio);margin-bottom:8px;font-weight:600;text-transform:uppercase;letter-spacing:.08em">Em fundo claro/foto</p>
-          <p style="font-family:var(--font-brand);font-weight:900;font-style:italic;font-size:1.75rem;color:#004D36;line-height:1">diferença</p>
-          <p style="font-size:.8rem;color:var(--cinza-medio);margin-top:6px">Floresta <code>#004D36</code> ou corpo <code>#005A45</code></p>
+        <div style="padding:18px 20px;background:#112A25;border-radius:10px;min-width:200px;flex:1">
+          <p style="font-size:10px;color:rgba(255,255,255,.4);margin-bottom:8px;font-weight:700;text-transform:uppercase;letter-spacing:.1em">Editorial dark — Montserrat 900 Italic</p>
+          <p style="font-family:'Montserrat',sans-serif;font-weight:900;font-style:italic;font-size:1.875rem;color:#62BB46;line-height:1">diferença</p>
+          <p style="font-size:.75rem;color:rgba(255,255,255,.4);margin-top:6px">Lime em slides escuros e key visuals</p>
         </div>
-        <div style="padding:16px 20px;background:#fff;border:1px solid rgba(0,77,54,.1);border-radius:10px;min-width:240px;flex:1">
-          <p style="font-size:11px;color:var(--cinza-medio);margin-bottom:8px;font-weight:600;text-transform:uppercase;letter-spacing:.08em">Nunca</p>
-          <ul style="padding-left:16px;font-size:.875rem;color:var(--cinza-medio);line-height:1.7">
-            <li>Vermelho, azul ou qualquer cor fora da paleta verde</li>
-            <li>Gradiente multi-cor no texto</li>
-            <li>"diferença" em peso regular — sempre bold/black</li>
-          </ul>
+        <div style="padding:18px 20px;background:#E8F4DE;border-radius:10px;min-width:200px;flex:1">
+          <p style="font-size:10px;color:var(--muted);margin-bottom:8px;font-weight:700;text-transform:uppercase;letter-spacing:.1em">Editorial claro — Montserrat 900 Italic</p>
+          <p style="font-family:'Montserrat',sans-serif;font-weight:900;font-style:italic;font-size:1.875rem;color:#112A25;line-height:1">diferença</p>
+          <p style="font-size:.75rem;color:var(--muted);margin-top:6px">Dark green em key visual, outdoor, slides</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+
 <!-- ═══════════════════ 4. TIPOGRAFIA ═══════════════════ -->
 <section id="tipografia">
   <div class="wrap">
     <p class="sec-label">04 — Tipografia</p>
     <h2 class="sec-title">Sistema Tipográfico</h2>
-    <p class="sec-desc">Montserrat como fonte da marca — autoridade, modernidade, peso. Inter para corpo e interfaces. A palavra "diferença" e "bem feito" sempre em Montserrat Black Italic — é a assinatura visual da campanha.</p>
+    <p class="sec-desc"><strong style="color:var(--ink)">Work Sans</strong> é a fonte primária (site cipasa.com, anúncios, copy de produto). <strong style="color:var(--ink)">Montserrat</strong> para editorial e key visual. "diferença" sempre 900 — Work Sans nos ads, Montserrat nos key visuals.</p>
 
     <div class="type-specimens">
       <div class="type-specimen" style="background:var(--verde-floresta)">
-        <div class="type-specimen-label" style="color:rgba(255,255,255,.35)">Display hero — Montserrat 900 · capa, banner, hero</div>
+        <div class="type-specimen-label" style="color:rgba(255,255,255,.35)">Display hero — Work Sans 700 · hero do site (H1: 51.2px / H2 slide: 65px uppercase)</div>
         <p class="t-display" style="color:var(--branco)">Cipasa Urbanismo</p>
         <div class="type-meta">
           <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.6)">Montserrat</span>
@@ -1231,6 +1169,104 @@ footer a:hover{color:var(--verde-lime)}
       <p style="font-family:var(--font-brand);font-weight:800;font-style:italic;font-size:1.75rem;color:var(--branco);margin-bottom:12px">"Isso faz diferença?"</p>
       <p style="font-size:.9375rem;color:rgba(255,255,255,.6);max-width:560px;line-height:1.6">Se não faz diferença, não é prioridade. Se faz, merece foco e energia. Isso reduz ruído e desgaste. Aplica-se a decisões criativas, estratégicas e de conteúdo.</p>
     </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CRIATIVOS AD ═══════════════════ -->
+<section id="criativos-ad" style="padding:96px 0;border-bottom:1px solid rgba(0,77,54,.07)">
+  <div class="wrap">
+    <p class="sec-label">10 — Criativos de Ad</p>
+    <h2 class="sec-title">Templates de Anúncio — Mapeamento</h2>
+    <p class="sec-desc">Templates reais mapeados dos criativos 35 anos. Base de referência para geração de novos anúncios via ChatGPT/IA. Cada template tem anatomia detalhada com camadas, tipografia e regras de composição.</p>
+
+    <!-- Template WhatsApp Story -->
+    <div style="background:var(--branco);border:1px solid rgba(0,77,54,.08);border-radius:16px;overflow:hidden;margin-bottom:28px">
+      <div style="padding:16px 24px;border-bottom:1px solid rgba(0,77,54,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <div>
+          <h3 style="font-size:1rem;font-weight:700;color:var(--ink)">Template A — WhatsApp Story (9:16)</h3>
+          <p style="font-size:.875rem;color:var(--muted);margin-top:2px">Formato vertical · 1080×1920px · Anúncios de produto</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:0;flex-wrap:wrap">
+        <div style="flex:1;min-width:280px;padding:24px">
+          <img src="assets/brand/criativos-whatsapp-stories.jpg" alt="Criativos WhatsApp Stories — 3 variações" style="width:100%;border-radius:10px;box-shadow:0 4px 20px rgba(0,77,54,.1)">
+        </div>
+        <div style="flex:1;min-width:280px;padding:24px;display:flex;flex-direction:column;gap:12px">
+          <div style="padding:14px 16px;background:var(--off-white);border-radius:10px;border-left:3px solid var(--verde-lime)">
+            <p style="font-size:11px;font-weight:700;color:var(--verde-lime);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px">① Foto de pessoa</p>
+            <p style="font-size:.875rem;color:var(--muted);line-height:1.5">Real, expressão natural. NÃO olhando para câmera. Pessoas reais em momentos mundanos.</p>
+          </div>
+          <div style="padding:14px 16px;background:var(--off-white);border-radius:10px;border-left:3px solid var(--verde-lime)">
+            <p style="font-size:11px;font-weight:700;color:var(--verde-lime);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px">② Copy setup</p>
+            <p style="font-size:.875rem;color:var(--muted);line-height:1.5">Work Sans 400 branco · ~18–22px · ex: <em>"Investimento seguro é o que faz a"</em></p>
+          </div>
+          <div style="padding:14px 16px;background:var(--verde-dark);border-radius:10px;border-left:3px solid var(--verde-lime)">
+            <p style="font-size:11px;font-weight:700;color:var(--verde-lime);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px">③ "diferença" — hero</p>
+            <p style="font-family:'Work Sans',sans-serif;font-weight:900;font-size:1.5rem;color:#FFFFFF;line-height:1;margin-bottom:4px">diferença</p>
+            <p style="font-size:.8rem;color:rgba(255,255,255,.5)">Work Sans 900 · branco · ~72–96px no canvas</p>
+          </div>
+          <div style="padding:14px 16px;background:var(--off-white);border-radius:10px;border-left:3px solid var(--verde-lime)">
+            <p style="font-size:11px;font-weight:700;color:var(--verde-lime);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">④ Badges de dados</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <div style="background:var(--verde-lime);border-radius:6px;padding:6px 12px;font-size:11px;font-weight:700;color:var(--verde-dark)">lotes a partir de 300m²</div>
+              <div style="background:var(--verde-lime);border-radius:6px;padding:6px 12px;font-size:11px;font-weight:700;color:var(--verde-dark)">Pronto para construir</div>
+            </div>
+          </div>
+          <div style="padding:14px 16px;background:var(--off-white);border-radius:10px;border-left:3px solid rgba(0,77,54,.3)">
+            <p style="font-size:11px;font-weight:700;color:var(--verde-corpo);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px">⑤ Rodapé</p>
+            <p style="font-size:.875rem;color:var(--muted);line-height:1.5">Logo empreendimento centralizado + Gradiente lime strip (diagonal) + "CIPASA 35 anos" badge outline na faixa branca</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Template Outdoor -->
+    <div style="background:var(--branco);border:1px solid rgba(0,77,54,.08);border-radius:16px;overflow:hidden;margin-bottom:28px">
+      <div style="padding:16px 24px;border-bottom:1px solid rgba(0,77,54,.07)">
+        <h3 style="font-size:1rem;font-weight:700;color:var(--ink)">Template B — Outdoor / Billboard (16:9)</h3>
+        <p style="font-size:.875rem;color:var(--muted);margin-top:2px">Horizontal · fundo bichromático · anúncio institucional + produto</p>
+      </div>
+      <div style="padding:20px">
+        <img src="assets/brand/aplicacao-outdoor-billboard.jpg" alt="Outdoor billboard Verana 35 anos" style="width:100%;border-radius:10px;box-shadow:0 4px 20px rgba(0,77,54,.1);margin-bottom:20px">
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px">
+          <div style="padding:14px;background:var(--off-white);border-radius:10px"><p style="font-size:11px;font-weight:700;color:var(--verde-lime);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Esquerda — gradiente lime</p><p style="font-size:.875rem;color:var(--muted);line-height:1.5">Background lime → off-white. Copy de produto: endereço/distância. Badges de dados (m², m²/preservada, minutos).</p></div>
+          <div style="padding:14px;background:var(--off-white);border-radius:10px"><p style="font-size:11px;font-weight:700;color:var(--verde-lime);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Família no centro</p><p style="font-size:.875rem;color:var(--muted);line-height:1.5">Foto de família cruza os dois lados da composição — não responde à divisão esquerda/direita.</p></div>
+          <div style="padding:14px;background:var(--off-white);border-radius:10px"><p style="font-size:11px;font-weight:700;color:var(--verde-lime);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Direita — foto + copy</p><p style="font-size:.875rem;color:var(--muted);line-height:1.5">"Nós fazemos diferente / e isso faz / <strong>diferença</strong>" em Work Sans branco. Logo empreendimento top-right. Cipasa 35 anos badge filled.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Template Carrossel Amenidades -->
+    <div style="background:var(--branco);border:1px solid rgba(0,77,54,.08);border-radius:16px;overflow:hidden;margin-bottom:28px">
+      <div style="padding:16px 24px;border-bottom:1px solid rgba(0,77,54,.07)">
+        <h3 style="font-size:1rem;font-weight:700;color:var(--ink)">Template C — Carrossel de Amenidades (1:1)</h3>
+        <p style="font-size:.875rem;color:var(--muted);margin-top:2px">Feed quadrado · keyword overlay · "Mais de 20 formas de viver o mesmo endereço."</p>
+      </div>
+      <div style="padding:20px">
+        <img src="assets/brand/criativos-amenidades-carousel.jpg" alt="Carrossel amenidades Verana" style="width:100%;border-radius:10px;box-shadow:0 4px 20px rgba(0,77,54,.1);margin-bottom:20px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div style="padding:14px;background:var(--off-white);border-radius:10px"><p style="font-size:11px;font-weight:700;color:var(--verde-lime);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Foto real + keyword</p><p style="font-size:.875rem;color:var(--muted);line-height:1.5">Cada card = 1 foto real da amenidade + nome em verde-lime grande sobreposto. Círculo orgânico translúcido em algum canto.</p></div>
+          <div style="padding:14px;background:var(--off-white);border-radius:10px"><p style="font-size:11px;font-weight:700;color:var(--verde-lime);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Keyword typography</p><p style="font-size:.875rem;color:var(--muted);line-height:1.5">Work Sans 900 verde-lime para o nome ("clube", "quadra", "academia"). Word menor em branco/cinza para o complemento ("de tênis", "completa").</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Template Grid Verana -->
+    <div style="background:var(--branco);border:1px solid rgba(0,77,54,.08);border-radius:16px;overflow:hidden">
+      <div style="padding:16px 24px;border-bottom:1px solid rgba(0,77,54,.07)">
+        <h3 style="font-size:1rem;font-weight:700;color:var(--ink)">Template D — Grid Editorial Verana (feed multi-card)</h3>
+        <p style="font-size:.875rem;color:var(--muted);margin-top:2px">Série de cards com cenas do cotidiano · copy aspiracional · mixes de foto+texto</p>
+      </div>
+      <div style="padding:20px">
+        <img src="assets/brand/criativos-verana-grid.jpg" alt="Grid editorial Verana — cenas do cotidiano" style="width:100%;border-radius:10px;box-shadow:0 4px 20px rgba(0,77,54,.1);margin-bottom:20px">
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px">
+          <div style="padding:14px;background:var(--off-white);border-radius:10px"><p style="font-size:11px;font-weight:700;color:var(--verde-lime);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Cena concreta</p><p style="font-size:.875rem;color:var(--muted);line-height:1.5">Copy descreve a experiência em 3–6 palavras: "Uma manhã no clube", "Assistir o sol se pôr".</p></div>
+          <div style="padding:14px;background:var(--off-white);border-radius:10px"><p style="font-size:11px;font-weight:700;color:var(--verde-lime);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Keyword em itálico</p><p style="font-size:.875rem;color:var(--muted);line-height:1.5">1 palavra-chave emocional em Montserrat italic lime: "relaxante", "friozinho", "amigos".</p></div>
+          <div style="padding:14px;background:var(--off-white);border-radius:10px"><p style="font-size:11px;font-weight:700;color:var(--verde-lime);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Logo empreendimento</p><p style="font-size:.875rem;color:var(--muted);line-height:1.5">Logo Verana (versão colorida) no rodapé de cada card. Sem Cipasa 35 anos em todos os cards — só no card de fechamento da série.</p></div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
