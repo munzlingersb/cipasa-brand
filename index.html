@@ -9,15 +9,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ── Design tokens — Cipasa Urbanismo 35 Anos ── */
+/* Cores extraídas diretamente do SVG original (group-35622.svg) */
 :root {
-  /* Cores primárias */
-  --verde-floresta:   #004D36;   /* dark bg, headlines institucionais */
-  --verde-corpo:      #005A45;   /* corp-forest — textos escuros */
-  --verde-lime:       #62BB46;   /* lime Cipasa — logo, ícones, accent */
-  --verde-brilho:     #3DAF1E;   /* diferença text em dark bg */
-  --verde-claro:      #A8D98A;   /* gradient stop, decorativo */
-  --verde-pale:       #E8F5E0;   /* slide backgrounds claros */
-  --olive:            #B5C98A;   /* ribbons decorativos no outdoor */
+  /* Cores primárias — extraídas do SVG original */
+  --verde-floresta:   #004D36;   /* dark bg, headlines, slides escuros */
+  --verde-corpo:      #005A45;   /* CIPASA URBANISMO wordmark — texto principal */
+  --verde-lime:       #62BB46;   /* anel externo do ícone — accent primário */
+  --verde-35anos:     #20592D;   /* fill do 35 anos mark — verde mais escuro */
+  --verde-brilho:     #3DAF1E;   /* "diferença" em peças muito escuras */
+  --verde-claro:      #A8D98A;   /* gradient stop, slides claros */
+  --verde-pale:       #E8F5E0;   /* backgrounds de seção claros */
+  --olive:            #B5C98A;   /* ribbons decorativos outdoor/folder */
+
+  /* Paisagem do ícone — 4 camadas (uso restrito ao ícone) */
+  --icon-bruma:       #B0CAC1;   /* camada superior da paisagem */
+  --icon-névoa:       #D8E6DC;   /* camada clara (meio) */
+  --icon-terra:       #407B6B;   /* camada inferior (terra) */
+  --icon-campo:       #82ADA1;   /* camada de fundo (campo) */
 
   /* Neutros */
   --off-white:        #F5F6F2;   /* page background */
@@ -610,60 +618,145 @@ footer a:hover{color:var(--verde-lime)}
   <div class="wrap">
     <p class="sec-label">02 — Logo</p>
     <h2 class="sec-title">Sistema de Logo</h2>
-    <p class="sec-desc">Logo principal Cipasa Urbanismo + marca comemorativa 35 anos. Múltiplas variações do selo 35 anos para diferentes contextos e fundos.</p>
+    <p class="sec-desc">SVG original mapeado pixel a pixel. 8 variações prontas — cores, recortes e versões brancas. Assets disponíveis em <code>assets/logos/</code> (SVG) e <code>assets/logos/png/</code> (PNG @1x e @2x).</p>
 
-    <div class="logo-grid">
-      <div class="logo-card">
-        <div class="logo-card-label">Logo principal — fundo claro</div>
-        <div class="logo-preview">
-          <img src="assets/brand/logo-variacoes.jpg" alt="Variações do logo Cipasa 35 anos" loading="lazy" style="border-radius:8px">
+    <!-- Logo completo -->
+    <div style="background:var(--branco);border:1px solid rgba(0,77,54,.08);border-radius:16px;overflow:hidden;margin-bottom:24px">
+      <div style="padding:16px 24px;border-bottom:1px solid rgba(0,77,54,.07);display:flex;align-items:center;justify-content:space-between">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9aaa9a">Logo completo — fundo claro</span>
+        <div style="display:flex;gap:8px">
+          <a href="assets/logos/cipasa-logo-completo.svg" download style="font-size:11px;font-weight:700;color:var(--verde-corpo);background:rgba(0,90,69,.08);padding:4px 12px;border-radius:9999px">↓ SVG</a>
+          <a href="assets/logos/png/cipasa-logo-completo@2x.png" download style="font-size:11px;font-weight:700;color:var(--verde-corpo);background:rgba(0,90,69,.08);padding:4px 12px;border-radius:9999px">↓ PNG @2x</a>
         </div>
-        <p class="logo-note">Logo Cipasa Urbanismo: ícone (círculo com paisagem/horizonte) + wordmark. A marca 35 anos é uma composição do numeral estilizado com o ícone da Cipasa integrado ao "3".</p>
       </div>
-      <div class="logo-card dark">
-        <div class="logo-card-label">Selos 35 anos — variações</div>
-        <div style="display:flex;flex-direction:column;gap:20px">
-          <div>
-            <p style="font-size:11px;color:rgba(255,255,255,.4);margin-bottom:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">Versão outline</p>
-            <div style="display:inline-flex;align-items:center;gap:8px;border:2px solid rgba(255,255,255,.8);border-radius:10px;padding:8px 18px;color:var(--branco);font-family:var(--font-brand);font-weight:700;font-size:1rem">
-              <span>CIPASA</span>
-              <span style="font-size:1.5rem;font-weight:900;line-height:1">35</span>
-              <span>anos</span>
-            </div>
-          </div>
-          <div>
-            <p style="font-size:11px;color:rgba(255,255,255,.4);margin-bottom:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">Versão filled</p>
-            <div style="display:inline-flex;align-items:center;gap:8px;background:var(--verde-corpo);border-radius:10px;padding:8px 18px;color:var(--branco);font-family:var(--font-brand);font-weight:700;font-size:1rem">
-              <span>CIPASA</span>
-              <span style="font-size:1.5rem;font-weight:900;color:var(--verde-lime);line-height:1">35</span>
-              <span>anos</span>
-            </div>
-          </div>
-          <div>
-            <p style="font-size:11px;color:rgba(255,255,255,.4);margin-bottom:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">3D hero (capa)</p>
-            <div style="font-size:.8125rem;color:rgba(255,255,255,.5);padding:12px 16px;background:rgba(255,255,255,.06);border-radius:8px">
-              Versão metálica 3D do numeral "35" usada apenas em capa/hero de apresentação. Verde metálico com brilho de luz direcional. Nunca em peças de Ad ou materiais de menor escala.
-            </div>
-          </div>
-        </div>
-        <p class="logo-note" style="margin-top:20px">O numeral "35" integra visualmente o ícone da Cipasa (horizonte/paisagem) no interior do algarismo. Existe em 3 variações: compacto "35 anos", com tagline "Fazendo a diferença", com "de história".</p>
+      <div style="padding:40px;display:flex;align-items:center;justify-content:center;background:var(--off-white)">
+        <img src="assets/logos/cipasa-logo-completo.svg" alt="Cipasa Urbanismo — Logo completo 35 anos" style="max-width:100%;height:auto;max-height:72px">
       </div>
     </div>
 
-    <div style="padding:28px;background:var(--branco);border-radius:16px;border:1px solid rgba(0,77,54,.08);margin-top:8px">
-      <h3 style="font-size:.9375rem;font-weight:700;color:var(--ink);margin-bottom:20px">Regras de uso do logo</h3>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px">
-        <div style="padding:14px 16px;background:var(--cinza-leve);border-radius:10px">
-          <div style="font-size:11px;font-weight:700;color:var(--verde-lime);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Uso do selo</div>
-          <p style="font-size:.875rem;color:var(--cinza-medio);line-height:1.5">O selo "CIPASA 35 anos" aparece em todas as peças da campanha de 2026 — social, outdoor, merch, interno. Substitui a assinatura isolada do logotipo quando em contexto de campanha.</p>
+    <!-- Grid de variações -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px">
+
+      <!-- Ícone -->
+      <div style="background:var(--branco);border:1px solid rgba(0,77,54,.08);border-radius:14px;overflow:hidden">
+        <div style="padding:12px 18px;border-bottom:1px solid rgba(0,77,54,.07);display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9aaa9a">Ícone isolado</span>
+          <a href="assets/logos/cipasa-icone.svg" download style="font-size:10px;font-weight:700;color:var(--verde-corpo);background:rgba(0,90,69,.08);padding:3px 10px;border-radius:9999px">↓ SVG</a>
         </div>
-        <div style="padding:14px 16px;background:var(--cinza-leve);border-radius:10px">
-          <div style="font-size:11px;font-weight:700;color:var(--verde-lime);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Combinação com sub-marca</div>
-          <p style="font-size:.875rem;color:var(--cinza-medio);line-height:1.5">Logo principal Cipasa + Selo 35 anos podem coexistir. Em peças de empreendimentos: logo do empreendimento (ex: Verana) + Cipasa 35 anos como assinatura da loteadora.</p>
+        <div style="padding:32px;display:flex;align-items:center;justify-content:center;background:var(--off-white)">
+          <img src="assets/logos/cipasa-icone.svg" alt="Cipasa — Ícone" style="height:72px;width:auto">
         </div>
-        <div style="padding:14px 16px;background:var(--cinza-leve);border-radius:10px">
-          <div style="font-size:11px;font-weight:700;color:var(--verde-lime);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Fundo escuro</div>
-          <p style="font-size:.875rem;color:var(--cinza-medio);line-height:1.5">Em backgrounds escuros (verde-floresta): selo em versão outline branca. Logo Cipasa em versão branca. Nunca verde-lime sobre verde-lime.</p>
+      </div>
+
+      <!-- Wordmark -->
+      <div style="background:var(--branco);border:1px solid rgba(0,77,54,.08);border-radius:14px;overflow:hidden">
+        <div style="padding:12px 18px;border-bottom:1px solid rgba(0,77,54,.07);display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9aaa9a">Wordmark CIPASA URBANISMO</span>
+          <a href="assets/logos/cipasa-wordmark.svg" download style="font-size:10px;font-weight:700;color:var(--verde-corpo);background:rgba(0,90,69,.08);padding:3px 10px;border-radius:9999px">↓ SVG</a>
+        </div>
+        <div style="padding:32px;display:flex;align-items:center;justify-content:center;background:var(--off-white)">
+          <img src="assets/logos/cipasa-wordmark.svg" alt="CIPASA URBANISMO wordmark" style="height:56px;width:auto">
+        </div>
+      </div>
+
+      <!-- Logo sem badge -->
+      <div style="background:var(--branco);border:1px solid rgba(0,77,54,.08);border-radius:14px;overflow:hidden">
+        <div style="padding:12px 18px;border-bottom:1px solid rgba(0,77,54,.07);display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9aaa9a">Logo sem badge 35 anos</span>
+          <a href="assets/logos/cipasa-logo-sem-35anos.svg" download style="font-size:10px;font-weight:700;color:var(--verde-corpo);background:rgba(0,90,69,.08);padding:3px 10px;border-radius:9999px">↓ SVG</a>
+        </div>
+        <div style="padding:32px;display:flex;align-items:center;justify-content:center;background:var(--off-white)">
+          <img src="assets/logos/cipasa-logo-sem-35anos.svg" alt="Cipasa Urbanismo sem badge" style="height:60px;width:auto">
+        </div>
+      </div>
+
+      <!-- Badge 35 anos -->
+      <div style="background:var(--branco);border:1px solid rgba(0,77,54,.08);border-radius:14px;overflow:hidden">
+        <div style="padding:12px 18px;border-bottom:1px solid rgba(0,77,54,.07);display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9aaa9a">Badge 35 anos isolado</span>
+          <a href="assets/logos/cipasa-35anos-badge.svg" download style="font-size:10px;font-weight:700;color:var(--verde-corpo);background:rgba(0,90,69,.08);padding:3px 10px;border-radius:9999px">↓ SVG</a>
+        </div>
+        <div style="padding:32px;display:flex;align-items:center;justify-content:center;background:var(--off-white)">
+          <img src="assets/logos/cipasa-35anos-badge.svg" alt="Badge 35 anos" style="height:72px;width:auto">
+        </div>
+      </div>
+    </div>
+
+    <!-- Versões brancas sobre fundo escuro -->
+    <div style="background:var(--verde-floresta);border-radius:16px;overflow:hidden;margin-bottom:24px">
+      <div style="padding:16px 24px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)">Versões brancas — uso em fundos escuros</span>
+        <a href="assets/logos/cipasa-logo-branco.svg" download style="font-size:11px;font-weight:700;color:var(--verde-lime);background:rgba(98,187,70,.15);padding:4px 12px;border-radius:9999px">↓ SVG branco</a>
+      </div>
+      <div style="padding:40px;display:flex;align-items:center;justify-content:center">
+        <img src="assets/logos/cipasa-logo-branco.svg" alt="Cipasa — Logo branco" style="max-width:100%;height:auto;max-height:72px">
+      </div>
+      <div style="padding:0 40px 40px;display:flex;gap:48px;align-items:center;justify-content:center;flex-wrap:wrap">
+        <div style="text-align:center">
+          <img src="assets/logos/cipasa-icone-branco.svg" alt="Ícone branco" style="height:64px;width:auto;margin:0 auto 8px">
+          <p style="font-size:11px;color:rgba(255,255,255,.4);font-weight:600;letter-spacing:.06em;text-transform:uppercase">Ícone</p>
+        </div>
+        <div style="text-align:center">
+          <img src="assets/logos/cipasa-logo-sem-35anos-branco.svg" alt="Logo sem badge branco" style="height:48px;width:auto;margin:0 auto 8px">
+          <p style="font-size:11px;color:rgba(255,255,255,.4);font-weight:600;letter-spacing:.06em;text-transform:uppercase">Sem badge</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Anatomia do logo + tokens de cor -->
+    <div style="background:var(--branco);border:1px solid rgba(0,77,54,.08);border-radius:16px;padding:28px">
+      <h3 style="font-size:.9375rem;font-weight:700;color:var(--ink);margin-bottom:20px">Anatomia — cores do SVG original</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:24px">
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--cinza-leve);border-radius:10px">
+          <div style="width:36px;height:36px;border-radius:8px;background:#62BB46;flex-shrink:0"></div>
+          <div><div style="font-size:11px;font-weight:700;color:var(--ink)">verde-lime</div><div style="font-family:ui-monospace,monospace;font-size:11px;color:var(--cinza-medio)">#62BB46</div><div style="font-size:10px;color:#9aaa9a">Anel externo ícone</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--cinza-leve);border-radius:10px">
+          <div style="width:36px;height:36px;border-radius:8px;background:#005A45;flex-shrink:0"></div>
+          <div><div style="font-size:11px;font-weight:700;color:var(--ink)">verde-corpo</div><div style="font-family:ui-monospace,monospace;font-size:11px;color:var(--cinza-medio)">#005A45</div><div style="font-size:10px;color:#9aaa9a">CIPASA URBANISMO</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--cinza-leve);border-radius:10px">
+          <div style="width:36px;height:36px;border-radius:8px;background:#20592D;flex-shrink:0"></div>
+          <div><div style="font-size:11px;font-weight:700;color:var(--ink)">verde-35anos</div><div style="font-family:ui-monospace,monospace;font-size:11px;color:var(--cinza-medio)">#20592D</div><div style="font-size:10px;color:#9aaa9a">Badge 35 anos</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--cinza-leve);border-radius:10px">
+          <div style="width:36px;height:36px;border-radius:8px;background:#82ADA1;flex-shrink:0"></div>
+          <div><div style="font-size:11px;font-weight:700;color:var(--ink)">icon-campo</div><div style="font-family:ui-monospace,monospace;font-size:11px;color:var(--cinza-medio)">#82ADA1</div><div style="font-size:10px;color:#9aaa9a">Paisagem — fundo</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--cinza-leve);border-radius:10px">
+          <div style="width:36px;height:36px;border-radius:8px;background:#B0CAC1;flex-shrink:0"></div>
+          <div><div style="font-size:11px;font-weight:700;color:var(--ink)">icon-bruma</div><div style="font-family:ui-monospace,monospace;font-size:11px;color:var(--cinza-medio)">#B0CAC1</div><div style="font-size:10px;color:#9aaa9a">Paisagem — topo</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--cinza-leve);border-radius:10px">
+          <div style="width:36px;height:36px;border-radius:8px;background:#D8E6DC;border:1px solid rgba(0,0,0,.06);flex-shrink:0"></div>
+          <div><div style="font-size:11px;font-weight:700;color:var(--ink)">icon-névoa</div><div style="font-family:ui-monospace,monospace;font-size:11px;color:var(--cinza-medio)">#D8E6DC</div><div style="font-size:10px;color:#9aaa9a">Paisagem — claro</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--cinza-leve);border-radius:10px">
+          <div style="width:36px;height:36px;border-radius:8px;background:#407B6B;flex-shrink:0"></div>
+          <div><div style="font-size:11px;font-weight:700;color:var(--ink)">icon-terra</div><div style="font-family:ui-monospace,monospace;font-size:11px;color:var(--cinza-medio)">#407B6B</div><div style="font-size:10px;color:#9aaa9a">Paisagem — baixo</div></div>
+        </div>
+      </div>
+
+      <h3 style="font-size:.9375rem;font-weight:700;color:var(--ink);margin-bottom:14px">Regras de uso</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px">
+        <div style="padding:14px 16px;background:var(--cinza-leve);border-radius:10px"><div style="font-size:11px;font-weight:700;color:var(--verde-lime);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Área de proteção</div><p style="font-size:.875rem;color:var(--cinza-medio);line-height:1.5">Zona de respiro mínima = altura da letra "C" em todos os lados. Nenhum elemento visual deve invadir essa área.</p></div>
+        <div style="padding:14px 16px;background:var(--cinza-leve);border-radius:10px"><div style="font-size:11px;font-weight:700;color:var(--verde-lime);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Tamanho mínimo</div><p style="font-size:.875rem;color:var(--cinza-medio);line-height:1.5">Logo completo: mínimo 120px de largura. Ícone isolado: mínimo 24px. Abaixo disso, usar apenas wordmark.</p></div>
+        <div style="padding:14px 16px;background:var(--cinza-leve);border-radius:10px"><div style="font-size:11px;font-weight:700;color:var(--verde-lime);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Fundos escuros</div><p style="font-size:.875rem;color:var(--cinza-medio);line-height:1.5">Usar <code>cipasa-logo-branco.svg</code>. As 4 camadas da paisagem ficam em branco com opacidades distintas para manter leiturabilidade.</p></div>
+        <div style="padding:14px 16px;background:var(--cinza-leve);border-radius:10px"><div style="font-size:11px;font-weight:700;color:var(--verde-lime);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Badge 35 anos</div><p style="font-size:.875rem;color:var(--cinza-medio);line-height:1.5">Usar o ícone Cipasa integrado no "35" — nunca substituir por numerais genéricos. Válido apenas até 31/12/2026.</p></div>
+      </div>
+
+      <!-- Downloads completos -->
+      <div style="margin-top:20px;padding:16px 20px;background:rgba(0,77,54,.04);border-radius:10px;border:1px solid rgba(0,77,54,.1)">
+        <p style="font-size:12px;font-weight:700;color:var(--verde-corpo);margin-bottom:12px;letter-spacing:.06em;text-transform:uppercase">Todos os arquivos</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <a href="assets/logos/cipasa-logo-completo.svg"         download style="font-size:12px;font-weight:600;color:var(--verde-corpo);padding:5px 14px;border-radius:9999px;background:rgba(0,90,69,.08);white-space:nowrap">cipasa-logo-completo.svg</a>
+          <a href="assets/logos/cipasa-logo-sem-35anos.svg"       download style="font-size:12px;font-weight:600;color:var(--verde-corpo);padding:5px 14px;border-radius:9999px;background:rgba(0,90,69,.08);white-space:nowrap">cipasa-logo-sem-35anos.svg</a>
+          <a href="assets/logos/cipasa-icone.svg"                 download style="font-size:12px;font-weight:600;color:var(--verde-corpo);padding:5px 14px;border-radius:9999px;background:rgba(0,90,69,.08);white-space:nowrap">cipasa-icone.svg</a>
+          <a href="assets/logos/cipasa-wordmark.svg"              download style="font-size:12px;font-weight:600;color:var(--verde-corpo);padding:5px 14px;border-radius:9999px;background:rgba(0,90,69,.08);white-space:nowrap">cipasa-wordmark.svg</a>
+          <a href="assets/logos/cipasa-35anos-badge.svg"          download style="font-size:12px;font-weight:600;color:var(--verde-corpo);padding:5px 14px;border-radius:9999px;background:rgba(0,90,69,.08);white-space:nowrap">cipasa-35anos-badge.svg</a>
+          <a href="assets/logos/cipasa-logo-branco.svg"           download style="font-size:12px;font-weight:600;color:var(--verde-corpo);padding:5px 14px;border-radius:9999px;background:rgba(0,90,69,.08);white-space:nowrap">cipasa-logo-branco.svg</a>
+          <a href="assets/logos/cipasa-icone-branco.svg"          download style="font-size:12px;font-weight:600;color:var(--verde-corpo);padding:5px 14px;border-radius:9999px;background:rgba(0,90,69,.08);white-space:nowrap">cipasa-icone-branco.svg</a>
+          <a href="assets/logos/cipasa-logo-sem-35anos-branco.svg" download style="font-size:12px;font-weight:600;color:var(--verde-corpo);padding:5px 14px;border-radius:9999px;background:rgba(0,90,69,.08);white-space:nowrap">cipasa-logo-sem-35anos-branco.svg</a>
         </div>
       </div>
     </div>
