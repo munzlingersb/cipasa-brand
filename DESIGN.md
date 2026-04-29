@@ -1,295 +1,200 @@
 ---
 version: alpha
-name: Cipasa Urbanismo — Verana Parque Alvorada
+name: Cipasa Urbanismo — 35 Anos
 description: >
-  Dois layers de marca: Cipasa Urbanismo (corporativo, 35 anos, verde-limão
-  energético) e Verana Parque Alvorada (sub-marca aspiracional de Marília-SP,
-  comunidade integrada à natureza, verde-floresta + coral quente). Criativos
-  Meta Ads usam exclusivamente a paleta VPA. Materiais institucionais usam
-  a paleta Cipasa corporate.
-
-# Compliance: follows DESIGN.md spec (alpha) — google-labs-code/design.md
-# Section order: Overview · Colors · Typography · Layout · Shapes · Components · Do's and Don'ts
+  Marca corporativa da Cipasa Urbanismo na campanha de 35 anos (2026).
+  Conceito central: "Aqui, fazer bem feito faz diferença!" — estrutural,
+  atravessa comunicação externa, discurso comercial, cultura interna e
+  próximos lançamentos. 21 estados, 35 anos de história.
 
 colors:
-  # ── VPA ad palette — usada em todos os criativos Meta Ads ────────────────
-  vpa-ink:        "#0F1714"   # texto escuro sobre fundos claros
-  vpa-forest:     "#2A5C3C"   # verde floresta VPA — tarjas, backgrounds, CTAs
-  vpa-grass:      "#4D7C0F"   # verde médio — pinos de mapa, barras, checkmarks
-  vpa-sage:       "#6B9E3A"   # verde claro — detalhe, outline map, secondary bars
-  vpa-coral:      "#E5734A"   # coral VPA — CTA principal, pin destaque, destaques
-  vpa-paper:      "#F5F4EE"   # off-white papel — fundo cards editoriais
-  vpa-sky:        "#5BA8D9"   # azul céu Marília (aparece em fotos aéreas)
-
-  # ── Cipasa corporate — branding institucional, não ads ───────────────────
-  corp-lime:      "#62BB46"   # verde-limão Cipasa (logo, nav ativa, badge site)
-  corp-forest:    "#005A45"   # verde institucional (CTA site)
-  corp-ink:       "#112A25"   # quase-preto verde (headlines site)
-  corp-gold:      "#C6AA6E"   # dourado (projetos premium, selos)
-
-  # ── Neutros compartilhados ────────────────────────────────────────────────
-  neutral-off:    "#F8FAF9"   # branco levemente esverdeado (cards site)
-  neutral-mid:    "#555454"   # cinza botões secundários
-  neutral-light:  "#F4F4F4"   # cinza claro backgrounds
+  verde-floresta:  "#004D36"
+  verde-corpo:     "#005A45"
+  verde-lime:      "#62BB46"
+  verde-brilho:    "#3DAF1E"
+  verde-claro:     "#A8D98A"
+  verde-pale:      "#E8F5E0"
+  olive:           "#B5C98A"
+  branco:          "#FFFFFF"
+  off-white:       "#F5F6F2"
+  ink:             "#1A2A1A"
 
 typography:
   display:
     fontFamily: Montserrat
-    fontSize: 3.5rem
-    fontWeight: "800"
-    lineHeight: "1.1"
-    letterSpacing: "-0.02em"
-  h1:
-    fontFamily: Work Sans
-    fontSize: 3.2rem
-    fontWeight: "700"
-    lineHeight: "1.15"
-  h2:
-    fontFamily: Work Sans
-    fontSize: 2rem
-    fontWeight: "600"
-    lineHeight: "1.2"
-  h3:
-    fontFamily: Work Sans
-    fontSize: 1.25rem
-    fontWeight: "600"
-    lineHeight: "1.3"
-  body-lg:
-    fontFamily: Work Sans
-    fontSize: 1.125rem
-    fontWeight: "400"
-    lineHeight: "1.6"
-  body-md:
-    fontFamily: Work Sans
-    fontSize: 1rem
-    fontWeight: "400"
-    lineHeight: "1.6"
-  label:
-    fontFamily: Work Sans
-    fontSize: 0.75rem
-    fontWeight: "600"
-    lineHeight: "1"
-    letterSpacing: "0.08em"
-  ad-headline:
-    fontFamily: Work Sans
-    fontSize: 3.5rem
+    fontSize: "clamp(2.5rem,6vw,5rem)"
     fontWeight: "900"
-    lineHeight: "1.05"
-    letterSpacing: "-0.01em"
-  ad-subhead:
-    fontFamily: Work Sans
-    fontSize: 1.625rem
-    fontWeight: "600"
-    lineHeight: "1.25"
+    lineHeight: "1.04"
+    letterSpacing: "-0.025em"
+  diferenca:
+    fontFamily: Montserrat
+    fontSize: "clamp(2.5rem,6vw,4.5rem)"
+    fontWeight: "900"
+    fontStyle: italic
+    lineHeight: "1"
+    letterSpacing: "-0.015em"
+  headline:
+    fontFamily: Montserrat
+    fontSize: "clamp(1.5rem,3vw,2.5rem)"
+    fontWeight: "700"
+    lineHeight: "1.2"
+  slogan:
+    fontFamily: Montserrat
+    fontSize: "1.375rem"
+    fontWeight: "700"
+    fontStyle: italic
+    lineHeight: "1.4"
+  body-lg:
+    fontFamily: Inter
+    fontSize: "1.125rem"
+    fontWeight: "400"
+    lineHeight: "1.65"
+  label:
+    fontFamily: Montserrat
+    fontSize: "0.75rem"
+    fontWeight: "700"
+    lineHeight: "1"
+    letterSpacing: "0.1em"
 
 rounded:
-  none: "0px"
-  sm:   "4px"
-  md:   "15px"
-  lg:   "30px"
-  pill: "50px"
+  sm:   "6px"
+  md:   "10px"
+  lg:   "16px"
+  xl:   "18px"
   full: "9999px"
 
 spacing:
   1:  "4px"
   2:  "8px"
-  3:  "12px"
   4:  "16px"
-  5:  "20px"
   6:  "24px"
   8:  "32px"
-  10: "40px"
   12: "48px"
   16: "64px"
   20: "80px"
   24: "96px"
 
 components:
-  ad-tarja:
-    backgroundColor: "{colors.vpa-forest}"
-    textColor: "{colors.vpa-paper}"
-    typography: label
-    rounded: none
-    height: "80px"
-    padding: "0 24px"
+  selo-35anos:
+    borderColor: "{colors.verde-corpo}"
+    borderWidth: "2px"
+    rounded: md
+    padding: "8px 18px"
+    textColor: "{colors.verde-corpo}"
 
-  ad-tarja-slim:
-    backgroundColor: "{colors.vpa-forest}"
-    textColor: "{colors.vpa-paper}"
-    typography: label
-    rounded: none
-    height: "70px"
-    padding: "0 20px"
+  selo-35anos-filled:
+    backgroundColor: "{colors.verde-corpo}"
+    borderColor: "{colors.verde-corpo}"
+    borderWidth: "2px"
+    rounded: md
+    padding: "8px 18px"
+    textColor: "{colors.branco}"
 
-  ad-pill-badge:
-    backgroundColor: "{colors.vpa-paper}"
-    textColor: "{colors.vpa-forest}"
-    typography: label
-    rounded: pill
-    padding: "6px 20px"
+  icon-badge-filled:
+    backgroundColor: "{colors.verde-lime}"
+    textColor: "{colors.verde-floresta}"
+    rounded: md
+    borderColor: "{colors.verde-lime}"
+    borderWidth: "2px"
 
-  cta-primary:
-    backgroundColor: "{colors.vpa-coral}"
-    textColor: "#FFFFFF"
-    typography: label
-    rounded: pill
-    padding: "14px 32px"
+  icon-badge-outline:
+    backgroundColor: "transparent"
+    textColor: "{colors.verde-corpo}"
+    rounded: md
+    borderColor: "{colors.verde-lime}"
+    borderWidth: "2px"
 
-  cta-primary-hover:
-    backgroundColor: "#C95A30"
-    textColor: "#FFFFFF"
-    typography: label
-    rounded: pill
+  dark-card:
+    backgroundColor: "{colors.verde-floresta}"
+    textColor: "{colors.branco}"
+    rounded: xl
+    padding: "36px"
 
-  cta-secondary:
-    backgroundColor: "{colors.corp-forest}"
-    textColor: "#FFFFFF"
-    typography: label
-    rounded: pill
-    padding: "14px 32px"
-
-  logo-badge:
-    backgroundColor: "#FFFFFF"
-    rounded: full
-    padding: "8px"
-    height: "90px"
-
-  pin-main:
-    backgroundColor: "{colors.vpa-coral}"
-    size: "24px"
-
-  pin-secondary:
-    backgroundColor: "{colors.vpa-grass}"
-    size: "16px"
-
-  map-label-box:
-    backgroundColor: "#FFFFFF"
-    textColor: "{colors.vpa-ink}"
-    typography: label
-    rounded: sm
-    padding: "4px 10px"
-
-  big-number:
-    fontFamily: Work Sans
-    fontSize: "160px"
-    fontWeight: "900"
-    textColor: "{colors.vpa-coral}"
-
-  divider-coral:
-    backgroundColor: "{colors.vpa-coral}"
-    width: "120px"
-    height: "4px"
+  ribbon-olive:
+    backgroundColor: "{colors.olive}"
+    height: "40px"
 ---
 
 ## Overview
 
-Cipasa Urbanismo é uma loteadora nacional com 35 anos de história, presente em 21 estados. A linguagem visual é **autoridade verde + modernidade limpa**: não é construtora de luxo nem popular — é aspiracional familiar, acessível a quem valoriza qualidade de vida.
+Cipasa Urbanismo completa 35 anos em 2026. O conceito **"Aqui, fazer bem feito faz diferença!"** é estrutural — sustenta comunicação externa, discurso comercial, cultura interna e próximos ciclos.
 
-**Verana Parque Alvorada** (VPA) é o empreendimento de Marília-SP. A sub-marca usa uma paleta mais escura, editorial e quente que o corporate: verde-floresta profundo como âncora, coral como energia e apelo à ação, off-white papel como respiro. O mood é "fim de semana quieto, espaço para crescer".
-
-**Dois layers, uma hierarquia:**
-- Cipasa corporate (verde-limão `#62BB46`): confiança institucional, usa-se em materiais de marca e FAQ
-- VPA sub-brand (verde-floresta `#2A5C3C` + coral `#E5734A`): criativos de Ads, carrosseis, stories
+**Posicionamento:** Autoridade verde + modernidade limpa. Aspiracional familiar. 35 anos de consistência como prova de entrega.
 
 ## Colors
 
-### VPA Ad Palette (uso em criativos Meta Ads)
+Paleta 100% verde — do floresta profundo ao lime vibrante.
 
 | Token | Hex | Uso |
 |---|---|---|
-| `vpa-forest` | `#2A5C3C` | Tarjas, fundos, backgrounds, CTAs dark |
-| `vpa-grass` | `#4D7C0F` | Pinos de mapa, barras comparativas, checkmarks |
-| `vpa-coral` | `#E5734A` | Pin principal, CTA button, destaques, dividers |
-| `vpa-paper` | `#F5F4EE` | Background de cards editoriais (mapas, gráficos) |
-| `vpa-ink` | `#0F1714` | Texto escuro sobre fundo claro |
-| `vpa-sage` | `#6B9E3A` | Versão mais clara de grass (bordas de mapa, sombra) |
+| `verde-floresta` | `#004D36` | Backgrounds escuros, dark cards, hero |
+| `verde-corpo` | `#005A45` | Textos, logo, bordas de selos |
+| `verde-lime` | `#62BB46` | Logo Cipasa, "diferença" sobre dark, badges filled |
+| `verde-brilho` | `#3DAF1E` | "diferença" em peças muito escuras (polo grafite) |
+| `verde-claro` | `#A8D98A` | Gradientes, slide backgrounds |
+| `verde-pale` | `#E8F5E0` | Seções claras, cards internos |
+| `olive` | `#B5C98A` | Ribbons decorativos horizontais |
 
-**Regra de contraste:** texto claro sobre `vpa-forest` tem ratio ≥ 7:1. Coral sobre branco é borderline — usar apenas em tamanho ≥ 24px ou bold.
-
-### Cipasa Corporate
-
-Não misturar verde-limão `#62BB46` com verde-floresta `#2A5C3C` no mesmo ad — paletas distintas, contextos distintos.
+**Regra crítica:** "diferença" é SEMPRE em verde-lime (sobre dark) ou verde-floresta (sobre claro/foto). Montserrat 900 Italic. Nunca em outra cor, nunca regular.
 
 ## Typography
 
-Dois pesos de marca Work Sans conduzem a hierarquia: **900/700 para headlines visuais**, **400/500 para corpo**. Montserrat reservada para display type muito grande (herói, cartão-destaque), nunca em body.
+Montserrat 900 Italic é a assinatura tipográfica da campanha — inviolável para "diferença" e "bem feito". Inter para corpo e dados.
 
-**Regras de escala em Ads 1080×1080:**
-- H1 dentro da imagem: `ad-headline` (Work Sans 900, ~56–64px no canvas)
-- Tarja pill badge: `label` com letterSpacing 0.08em, máximo 35 caracteres
-- Body/copy embaixo da imagem: `body-md` 16–18px em fonte do Meta
-
-**Pesos permitidos:** 300 · 400 · 500 · 600 · 700 · 800 · 900
-
-**Não usar:** Itálico em headlines de produto (ok em storyselling aspiracional). Nunca texto sobre gradiente.
+**Desdobramentos do mote:**
+- "Isso faz diferença."
+- "e isso faz diferença"
+- "Nós fazemos diferente"
+- "35 anos fazendo a diferença, nos projetos, nas cidades e na vida das pessoas."
+- "Contratar certo faz diferença." / "Cultura forte faz diferença." / etc.
 
 ## Layout
 
-**Grade de ads 1080×1080:**
-- Tarja no topo: 70–80px de altura fixo, full width
-- Zona limpa (negativo superior): mínimo 200px — onde o headline do Meta aparece
-- Logo rodapé: 80–90px de altura, posicionado 24px da borda inferior-direita
-- Margem de segurança: 40px em todos os lados para garantir que nada seja cortado
+**Outdoor 16:9:** Split — esquerda (fundo claro + círculo + ribbon olive + logo) / direita (foto aérea tintada verde + família + copy + selo 35 anos).
 
-**Grade de stories 1080×1920:**
-- Zona segura superior: 250px (notch/câmera)
-- Zona segura inferior: 300px (swipe-up indicator)
-- Split portrait: 65% imagem / 35% bloco de texto verde-floresta
+**Feed 1:1:** Dois padrões — (A) família + círculo + mote sobre fundo claro; (B) foto aérea tintada + "diferença" em destaque + selo.
 
-**Ritmo de espaçamento:** nunca padding uniforme. Variar: header tight, corpo respirado, rodapé moderado.
+**Story 9:16:** Foto aérea tintada (~65%) + badges de dados + rodapé com logo empreendimento + Cipasa 35 anos.
+
+**Slides internos 16:9:** Gradiente verde-claro → off-white. Verde-corpo para texto. Verde-lime para destaques.
 
 ## Elevation & Depth
 
-Fundo fotográfico com leve overlay escuro (`rgba(15, 23, 20, 0.25)`) para garantir legibilidade da tarja. Não usar sombras em texto — preferir área negativa clara (céu aberto) ou tarja opaca.
-
-Cards informativos (mapas, gráficos): fundo `vpa-paper` com sombra `box-shadow: 0 2px 12px rgba(15,23,20,0.08)`.
+Cards sobre fundo branco: `box-shadow: 0 2px 12px rgba(0,77,54,.08)`. Overlay foto aérea: `rgba(62,180,60,.4)`. Nunca sombra colorida fora do verde.
 
 ## Shapes
 
-- **Botão CTA:** pill `border-radius: 50px` — nunca quadrado ou apenas arredondado
-- **Badge de tarja:** pill interno `border-radius: 9999px` dentro da tarja retangular
-- **Cards informativos:** `border-radius: 15px`
-- **Logo em rodapé:** círculo ou badge circular com fundo branco
-- **Sem side-stripe borders** — se precisa delimitar, use background tint ou borda completa
+- Selos/badges: `border-radius: 10px`, borda 2px — nunca circular
+- Círculo compositivo: `border-radius: 50%`, transparente, pode ser cortado pelo frame
+- Ribbons: sem border-radius, apenas horizontais
 
 ## Components
 
-### Tarja de topo (ad)
-Faixa verde-floresta `#2A5C3C` full width, altura 70–80px. Dentro: pill badge off-white com texto label do empreendimento em Work Sans Semibold 600.
-```
-[    VERANA PARQUE ALVORADA · MARÍLIA    ]  ← pill badge centralizado na tarja
-```
-Variação: pill pode ficar alinhado à esquerda com logo à direita na tarja.
+### Selo CIPASA 35 anos
+Retângulo arredondado 10px, borda 2px verde-corpo. "CIPASA" + "35" (maior) + "anos". Versão filled: bg verde-corpo, "35" em verde-lime.
 
-### CTA Button (em cards com fundo escuro)
-Pill coral `#E5734A`, Work Sans 600, texto branco, padding 14×32px.
-Hover: `#C95A30` (15% mais escuro).
+### Badge de iconografia
+Retângulo arredondado 10px, borda verde-lime 2px. Superior: ícone + label. Inferior: dado em Montserrat 900. Filled: bg verde-lime. Outline: transparente.
 
-### Logo badge (rodapé)
-Logo Verana sobre círculo branco 90px de diâmetro, opacidade 95%, 24px da borda inferior-direita.
-
-### Big Number (cards de investimento)
-Montserrat Black ou Work Sans 900, coral `#E5734A`, ~140–160px. Nunca caber dois big numbers na mesma tela.
-
-### Mapa editorial
-Fundo `vpa-paper`, roads finas verde-floresta, bairros off-white distintos. Pinos de localização: coral (VPA, tamanho 1.5×) e verde-grass (outros pontos). Labels em caixinhas brancas Work Sans 13px.
+### Dark card (mote)
+Bg verde-floresta, padding 36px, border-radius 18px. Mote Montserrat 900 Italic branco, "diferença" em verde-lime.
 
 ## Do's and Don'ts
 
 **Do:**
-- Usar foto real do empreendimento como background — nunca render 3D genérico
-- Deixar zona de negativo no superior-direito para texto do Meta
-- Tarja + pill badge em cards com foto dark
-- Coral apenas para o elemento mais importante da tela
-- Work Sans 900 em headlines curtos (≤ 40 chars)
-- Escalar família de verde (`vpa-forest → vpa-grass → vpa-sage`) para hierarquia de dados
+- "diferença" e "bem feito" SEMPRE em Montserrat 900 Italic
+- Fotos reais de família em momentos mundanos
+- Fotos aéreas reais com overlay verde
+- Mote ou variações com "faz diferença" ao final
+- Selo "CIPASA 35 anos" em todas as peças 2026
+- Círculo orgânico como elemento compositivo
+- Ribbon olive como acento horizontal em impressos
 
 **Don't:**
-- Misturar verde-limão Cipasa (`#62BB46`) com verde-floresta VPA na mesma peça
-- Texto no terço central da imagem (área de eye-tracking do feed)
-- Gradiente de texto (`background-clip: text`) — proibido pelo spec
-- Glassmorphism decorativo
-- Mais de 2 pesos tipográficos por card
-- Imagem com pessoas olhando direto para câmera (break fourth wall — gera rejeição)
-- Lawns super-saturados ou cores neon
-- Compor card com mais de 1 big number
+- "diferença" em peso regular ou outra fonte
+- Numeral 3D metálico de capa em peças de Ad
+- Cores fora da paleta verde (vermelho, azul, laranja)
+- Copy genérico sem ancorar em "faz diferença"
+- Ribbon olive vertical
+- Render 3D de empreendimentos
+- Mote truncado — usar sempre a construção
