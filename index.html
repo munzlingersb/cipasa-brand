@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cipasa · Verana Parque Alvorada — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:      #F5F4EE;
+  --forest:     #2A5C3C;
+  --grass:      #4D7C0F;
+  --sage:       #6B9E3A;
+  --coral:      #E5734A;
+  --ink:        #0F1714;
+  --mid:        #3D5246;
+  --muted:      #6E8A78;
+  --faint:      #A8BEB0;
+  --white:      #FFFFFF;
+  --corp-lime:  #62BB46;
+  --corp-dark:  #005A45;
+  --corp-ink:   #112A25;
+  --corp-gold:  #C6AA6E;
+  --ease:       cubic-bezier(.22,1,.36,1);
+  --max:        1160px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Work Sans',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+code{
+  font-family:ui-monospace,SFMono-Regular,monospace;
+  font-size:.88em;
+  background:rgba(42,92,60,.08);
+  color:var(--forest);
+  padding:2px 6px;
+  border-radius:4px;
+}
+
+/* ── Layout ── */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 40px}
+
+/* ── Header ── */
+header{
+  background:var(--forest);
+  padding:80px 40px 64px;
+  position:relative;
+  overflow:hidden;
+}
+header::before{
+  content:'';
+  position:absolute;
+  top:-120px;right:-80px;
+  width:500px;height:500px;
+  background:radial-gradient(circle,rgba(229,115,74,.18) 0%,transparent 65%);
+  pointer-events:none;
+}
+.header-inner{max-width:var(--max);margin:0 auto}
+.logo-pill{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:9999px;
+  padding:8px 20px 8px 12px;
+  margin-bottom:40px;
+}
+.logo-pill-dot{
+  width:8px;height:8px;
+  background:var(--coral);
+  border-radius:50%;
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.logo-pill span{
+  font-size:13px;font-weight:600;letter-spacing:.06em;
+  color:rgba(245,244,238,.8);text-transform:uppercase;
+}
+header h1{
+  font-family:'Montserrat',sans-serif;
+  font-weight:900;font-size:clamp(2.5rem,6vw,4.5rem);
+  color:var(--paper);line-height:1.08;
+  letter-spacing:-.02em;
+  margin-bottom:16px;
+}
+header h1 em{
+  font-style:normal;
+  color:var(--coral);
+}
+header p.sub{
+  font-size:1.125rem;font-weight:400;
+  color:rgba(245,244,238,.7);
+  max-width:520px;
+}
+.header-meta{
+  display:flex;gap:40px;margin-top:48px;flex-wrap:wrap;
+}
+.header-meta-item label{
+  display:block;font-size:11px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(245,244,238,.45);margin-bottom:4px;
+}
+.header-meta-item span{
+  font-size:1rem;font-weight:600;color:var(--paper);
+}
+
+/* ── Nav ── */
+nav{
+  background:var(--white);
+  border-bottom:1px solid rgba(42,92,60,.1);
+  position:sticky;top:0;z-index:100;
+}
+nav ul{
+  max-width:var(--max);margin:0 auto;padding:0 40px;
+  display:flex;gap:4px;list-style:none;overflow-x:auto;
+  scrollbar-width:none;
+}
+nav ul::-webkit-scrollbar{display:none}
+nav li a{
+  display:block;padding:14px 16px;
+  font-size:13px;font-weight:600;letter-spacing:.04em;
+  color:var(--muted);text-decoration:none;white-space:nowrap;
+  border-bottom:2px solid transparent;
+  transition:color .2s,border-color .2s;
+}
+nav li a:hover{color:var(--forest);border-color:var(--forest)}
+
+/* ── Section ── */
+section{padding:80px 0;border-bottom:1px solid rgba(42,92,60,.08)}
+section:last-of-type{border-bottom:none}
+.section-label{
+  font-size:11px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--coral);
+  margin-bottom:12px;
+}
+.section-title{
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;font-size:2.25rem;
+  color:var(--ink);letter-spacing:-.01em;
+  margin-bottom:12px;
+}
+.section-desc{
+  font-size:1.0625rem;color:var(--muted);
+  max-width:580px;line-height:1.65;margin-bottom:48px;
+}
+
+/* ── Color system ── */
+.palette-group{margin-bottom:40px}
+.palette-group-label{
+  font-size:13px;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);
+  margin-bottom:16px;
+}
+.swatches{display:flex;flex-wrap:wrap;gap:12px}
+.swatch{
+  display:flex;flex-direction:column;
+  width:160px;border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 1px 4px rgba(15,23,20,.08);
+}
+.swatch-color{
+  height:80px;
+  position:relative;
+}
+.swatch-meta{
+  background:var(--white);
+  padding:12px 14px;
+}
+.swatch-name{
+  font-size:12px;font-weight:700;
+  color:var(--ink);margin-bottom:2px;
+}
+.swatch-hex{
+  font-family:ui-monospace,monospace;
+  font-size:11px;color:var(--muted);
+}
+.swatch-use{
+  font-size:11px;color:var(--faint);
+  margin-top:4px;line-height:1.4;
+}
+
+/* ── Typography ── */
+.type-specimens{display:flex;flex-direction:column;gap:32px}
+.type-specimen{
+  padding:28px 32px;
+  background:var(--white);
+  border-radius:12px;
+  border:1px solid rgba(42,92,60,.08);
+}
+.type-specimen-label{
+  font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--faint);
+  margin-bottom:16px;
+}
+.type-meta{
+  display:flex;gap:16px;margin-top:12px;flex-wrap:wrap;
+}
+.type-meta span{
+  font-size:12px;color:var(--muted);
+  background:rgba(42,92,60,.06);
+  padding:3px 10px;border-radius:9999px;
+}
+.disp{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(2rem,5vw,3.5rem);
+  font-weight:900;letter-spacing:-.02em;
+  color:var(--ink);line-height:1.1;
+}
+.h1{
+  font-family:'Work Sans',sans-serif;
+  font-size:clamp(1.75rem,4vw,3.2rem);
+  font-weight:700;color:var(--ink);line-height:1.15;
+}
+.h2{
+  font-size:2rem;font-weight:600;color:var(--ink);line-height:1.2;
+}
+.ad-hl{
+  font-family:'Work Sans',sans-serif;
+  font-size:clamp(1.5rem,3.5vw,3.5rem);
+  font-weight:900;letter-spacing:-.01em;
+  color:var(--forest);line-height:1.05;
+}
+.body-lg{font-size:1.125rem;color:var(--mid);line-height:1.65}
+.label{
+  font-size:.75rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--forest);
+}
+
+/* ── Components ── */
+.components-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.comp-card{
+  background:var(--white);
+  border:1px solid rgba(42,92,60,.08);
+  border-radius:16px;
+  padding:28px;
+}
+.comp-card-label{
+  font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--faint);margin-bottom:20px;
+}
+
+/* Tarja */
+.ad-tarja{
+  background:var(--forest);
+  height:80px;
+  display:flex;align-items:center;
+  padding:0 24px;
+  border-radius:8px;
+}
+.ad-tarja-pill{
+  background:var(--paper);
+  color:var(--forest);
+  font-size:12px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:6px 20px;
+  border-radius:9999px;
+  white-space:nowrap;
+}
+
+/* CTA */
+.cta-primary{
+  display:inline-flex;align-items:center;
+  background:var(--coral);color:var(--white);
+  font-weight:700;font-size:.875rem;letter-spacing:.06em;
+  text-transform:uppercase;
+  padding:14px 32px;border-radius:9999px;
+  border:none;cursor:pointer;
+  transition:background .2s var(--ease),transform .15s var(--ease);
+}
+.cta-primary:hover{background:#C95A30;transform:translateY(-1px)}
+.cta-secondary{
+  display:inline-flex;align-items:center;
+  background:var(--forest);color:var(--white);
+  font-weight:700;font-size:.875rem;letter-spacing:.06em;
+  text-transform:uppercase;
+  padding:14px 32px;border-radius:9999px;
+  border:none;cursor:pointer;
+  transition:background .2s var(--ease);
+}
+.cta-secondary:hover{background:#1E4430}
+
+/* Logo badge */
+.logo-badge-demo{
+  display:flex;align-items:center;gap:12px;
+  padding:16px;background:#1a1a1a;border-radius:12px;
+}
+.logo-badge{
+  width:90px;height:90px;
+  background:var(--white);
+  border-radius:9999px;
+  display:flex;align-items:center;justify-content:center;
+  opacity:.95;font-weight:900;font-size:.75rem;letter-spacing:.1em;
+  color:var(--forest);
+}
+
+/* Big number */
+.big-number{
+  font-family:'Work Sans',sans-serif;
+  font-size:5rem;font-weight:900;
+  color:var(--coral);line-height:1;
+}
+.big-number-sub{
+  font-size:1rem;font-weight:500;color:var(--muted);margin-top:4px;
+}
+
+/* Pin */
+.pins-demo{display:flex;align-items:center;gap:16px;padding:16px}
+.pin{border-radius:9999px;color:var(--white);
+  font-size:12px;font-weight:700;padding:6px 14px;
+}
+.pin-main{background:var(--coral);}
+.pin-sec{background:var(--grass);}
+
+/* Map label */
+.map-label{
+  background:var(--white);color:var(--ink);
+  font-size:12px;font-weight:700;
+  padding:4px 10px;border-radius:4px;
+  box-shadow:0 1px 6px rgba(15,23,20,.12);
+  display:inline-block;
+}
+
+/* ── Ad mock ── */
+.ad-mock{
+  background:var(--forest);
+  border-radius:16px;
+  overflow:hidden;
+  max-width:400px;
+}
+.ad-mock-photo{
+  background:linear-gradient(160deg,#3a6b4a 0%,#1e4232 100%);
+  height:260px;
+  position:relative;
+  display:flex;align-items:flex-end;
+  padding:20px;
+}
+.ad-mock-photo-label{
+  font-size:10px;letter-spacing:.08em;font-weight:600;
+  color:rgba(245,244,238,.5);text-transform:uppercase;
+}
+.ad-mock-tarja{
+  background:var(--forest);
+  padding:14px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-top:1px solid rgba(245,244,238,.1);
+}
+.ad-mock-badge{
+  background:var(--paper);
+  color:var(--forest);font-size:10px;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:5px 16px;border-radius:9999px;
+}
+.ad-mock-logo{
+  width:40px;height:40px;
+  background:var(--white);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:7px;font-weight:900;letter-spacing:.06em;color:var(--forest);
+}
+
+/* ── Rules ── */
+.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:640px){.rules-grid{grid-template-columns:1fr}}
+.rules-card{
+  padding:28px;border-radius:16px;
+}
+.rules-card.do{background:rgba(77,124,15,.08);border:1px solid rgba(77,124,15,.18)}
+.rules-card.dont{background:rgba(229,115,74,.07);border:1px solid rgba(229,115,74,.18)}
+.rules-card h3{
+  font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  margin-bottom:16px;
+}
+.rules-card.do h3{color:var(--grass)}
+.rules-card.dont h3{color:var(--coral)}
+.rules-card ul{padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.rules-card li{font-size:.9375rem;color:var(--mid);line-height:1.5}
+
+/* ── Footer ── */
+footer{
+  background:var(--forest);
+  padding:48px 40px;color:rgba(245,244,238,.6);
+  font-size:.875rem;
+}
+footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+footer strong{color:var(--paper)}
+footer a{color:rgba(245,244,238,.7);text-decoration:underline;}
+
+/* ── Responsive ── */
+@media(max-width:768px){
+  .wrap{padding:0 20px}
+  header{padding:60px 20px 48px}
+  section{padding:60px 0}
+  .section-title{font-size:1.75rem}
+  .swatches .swatch{width:140px}
+  .header-meta{gap:24px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-pill">
+      <div class="logo-pill-dot"></div>
+      <span>Design System · Alpha</span>
+    </div>
+    <h1>Cipasa <em>Verana</em><br>Parque Alvorada</h1>
+    <p class="sub">Brandbook público e design system para criativos Meta Ads do empreendimento em Marília-SP.</p>
+    <div class="header-meta">
+      <div class="header-meta-item">
+        <label>Spec</label>
+        <span>DESIGN.md alpha</span>
+      </div>
+      <div class="header-meta-item">
+        <label>Fontes</label>
+        <span>Work Sans · Montserrat</span>
+      </div>
+      <div class="header-meta-item">
+        <label>Formato ads</label>
+        <span>1080×1080 · 1080×1920</span>
+      </div>
+      <div class="header-meta-item">
+        <label>Empreendimento</label>
+        <span>Marília-SP · 250 m²</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#colors">Cores</a></li>
+    <li><a href="#typography">Tipografia</a></li>
+    <li><a href="#components">Componentes</a></li>
+    <li><a href="#ad-mock">Ad Preview</a></li>
+    <li><a href="#rules">Do's &amp; Don'ts</a></li>
+  </ul>
+</nav>
+
+<!-- ── Colors ── -->
+<section id="colors">
+  <div class="wrap">
+    <p class="section-label">01 — Cores</p>
+    <h2 class="section-title">Paleta do Sistema</h2>
+    <p class="section-desc">Dois layers de marca. VPA sub-brand exclusivo para criativos Meta Ads. Corporate apenas em materiais institucionais — nunca misturar verde-limão com verde-floresta na mesma peça.</p>
+
+    <div class="palette-group">
+      <p class="palette-group-label">VPA Ad Palette — Verana Parque Alvorada</p>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#2A5C3C"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">vpa-forest</div>
+            <div class="swatch-hex">#2A5C3C</div>
+            <div class="swatch-use">Tarjas, backgrounds, CTAs dark</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#4D7C0F"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">vpa-grass</div>
+            <div class="swatch-hex">#4D7C0F</div>
+            <div class="swatch-use">Pinos de mapa, barras, checkmarks</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#6B9E3A"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">vpa-sage</div>
+            <div class="swatch-hex">#6B9E3A</div>
+            <div class="swatch-use">Detalhe, outline de mapa</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#E5734A"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">vpa-coral</div>
+            <div class="swatch-hex">#E5734A</div>
+            <div class="swatch-use">CTA principal, pin destaque</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#F5F4EE;border-bottom:1px solid #e8e6dc"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">vpa-paper</div>
+            <div class="swatch-hex">#F5F4EE</div>
+            <div class="swatch-use">Background cards editoriais</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#0F1714"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">vpa-ink</div>
+            <div class="swatch-hex">#0F1714</div>
+            <div class="swatch-use">Texto escuro sobre fundo claro</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#5BA8D9"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">vpa-sky</div>
+            <div class="swatch-hex">#5BA8D9</div>
+            <div class="swatch-use">Céu Marília (fotos aéreas)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="palette-group">
+      <p class="palette-group-label">Cipasa Corporate — Branding Institucional</p>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#62BB46"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">corp-lime</div>
+            <div class="swatch-hex">#62BB46</div>
+            <div class="swatch-use">Logo, nav ativa, badge site</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#005A45"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">corp-forest</div>
+            <div class="swatch-hex">#005A45</div>
+            <div class="swatch-use">CTA institucional</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#112A25"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">corp-ink</div>
+            <div class="swatch-hex">#112A25</div>
+            <div class="swatch-use">Headlines site</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#C6AA6E"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">corp-gold</div>
+            <div class="swatch-hex">#C6AA6E</div>
+            <div class="swatch-use">Selos premium</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Typography ── -->
+<section id="typography">
+  <div class="wrap">
+    <p class="section-label">02 — Tipografia</p>
+    <h2 class="section-title">Sistema Tipográfico</h2>
+    <p class="section-desc">Work Sans conduz toda a hierarquia — 900/700 para headlines, 400/500 para corpo. Montserrat reservada para display type de grande impacto (big numbers, herói).</p>
+
+    <div class="type-specimens">
+      <div class="type-specimen">
+        <div class="type-specimen-label">Display · Montserrat 900</div>
+        <div class="disp">Verana Parque Alvorada</div>
+        <div class="type-meta">
+          <span>Montserrat</span><span>weight 900</span><span>3.5rem</span><span>tracking -0.02em</span>
+        </div>
+      </div>
+      <div class="type-specimen">
+        <div class="type-specimen-label">Ad Headline · Work Sans 900</div>
+        <div class="ad-hl">É assim todo domingo no Verana.</div>
+        <div class="type-meta">
+          <span>Work Sans</span><span>weight 900</span><span>3.5rem</span><span>tracking -0.01em</span>
+        </div>
+      </div>
+      <div class="type-specimen">
+        <div class="type-specimen-label">H1 · Work Sans 700</div>
+        <div class="h1">Marília cresce em direção ao Verana.</div>
+        <div class="type-meta">
+          <span>Work Sans</span><span>weight 700</span><span>3.2rem</span>
+        </div>
+      </div>
+      <div class="type-specimen">
+        <div class="type-specimen-label">H2 · Work Sans 600</div>
+        <div class="h2">Lotes a partir de 250 m² · Região dos Vales</div>
+        <div class="type-meta">
+          <span>Work Sans</span><span>weight 600</span><span>2rem</span>
+        </div>
+      </div>
+      <div class="type-specimen">
+        <div class="type-specimen-label">Body Large · Work Sans 400</div>
+        <div class="body-lg">Sem comprovação de renda. Sem banco. Direto com a Cipasa. Análise rápida e parcelamento acessível para você começar a construir o lar da sua família.</div>
+        <div class="type-meta">
+          <span>Work Sans</span><span>weight 400</span><span>1.125rem</span><span>line-height 1.6</span>
+        </div>
+      </div>
+      <div class="type-specimen">
+        <div class="type-specimen-label">Label · Work Sans 600 · Caps</div>
+        <div class="label">Verana Parque Alvorada · Marília-SP</div>
+        <div class="type-meta">
+          <span>Work Sans</span><span>weight 600</span><span>0.75rem</span><span>tracking 0.08em</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Components ── -->
+<section id="components">
+  <div class="wrap">
+    <p class="section-label">03 — Componentes</p>
+    <h2 class="section-title">Biblioteca de Componentes de Ad</h2>
+    <p class="section-desc">Blocos reutilizáveis que compõem cada criativo. Coral com parcimônia — apenas no elemento de maior importância por card.</p>
+
+    <div class="components-grid">
+      <div class="comp-card">
+        <div class="comp-card-label">Tarja de Topo (ad)</div>
+        <div class="ad-tarja">
+          <div class="ad-tarja-pill">Verana Parque Alvorada · Marília</div>
+        </div>
+        <p style="margin-top:12px;font-size:.85rem;color:var(--muted)">forest <code>#2A5C3C</code> · height 80px · pill interno off-white</p>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-card-label">CTAs</div>
+        <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+          <button class="cta-primary">Solicitar proposta</button>
+          <button class="cta-secondary">Saiba mais</button>
+        </div>
+        <p style="margin-top:12px;font-size:.85rem;color:var(--muted)">Coral para ação primária · Forest para secundária · Sempre pill</p>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-card-label">Big Number (investimento)</div>
+        <div class="big-number">R$ 480</div>
+        <div class="big-number-sub">/m² hoje no Verana Parque Alvorada</div>
+        <p style="margin-top:12px;font-size:.85rem;color:var(--muted)">Work Sans 900 · coral <code>#E5734A</code> · ~140px no canvas 1080px</p>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-card-label">Logo Badge (rodapé)</div>
+        <div class="logo-badge-demo">
+          <div class="logo-badge">VERANA</div>
+          <p style="font-size:.85rem;color:rgba(245,244,238,.6)">90px · círculo branco · opacidade 95% · 24px da borda</p>
+        </div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-card-label">Pins de Mapa</div>
+        <div class="pins-demo">
+          <div class="pin pin-main">VERANA</div>
+          <div class="pin pin-sec">UNIMAR</div>
+          <div class="pin pin-sec">FAMEMA</div>
+        </div>
+        <p style="margin-top:8px;font-size:.85rem;color:var(--muted)">Coral 1.5× para VPA · Grass para outros pontos</p>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-card-label">Map Label Box</div>
+        <div style="padding:16px;background:var(--paper);border-radius:8px;display:flex;flex-wrap:wrap;gap:8px">
+          <span class="map-label">Esmeralda · 4 min</span>
+          <span class="map-label">UNIMAR · 5 min</span>
+          <span class="map-label">FAMEMA · 7 min</span>
+        </div>
+        <p style="margin-top:12px;font-size:.85rem;color:var(--muted)">Branco arredondado · Work Sans 13px · sombra leve</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Ad Mock ── -->
+<section id="ad-mock">
+  <div class="wrap">
+    <p class="section-label">04 — Ad Preview</p>
+    <h2 class="section-title">Anatomia do Criativo</h2>
+    <p class="section-desc">Estrutura padrão de um card 1080×1080 com tarja no topo e logo no rodapé. Zona superior livre para o headline do Meta aparecer.</p>
+
+    <div style="display:flex;align-items:flex-start;gap:40px;flex-wrap:wrap">
+      <div class="ad-mock">
+        <div class="ad-mock-photo">
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(42,92,60,.1) 0%,rgba(42,92,60,.3) 100%)"></div>
+          <div style="position:absolute;top:16px;left:0;right:0;display:flex;align-items:center;padding:0 16px;background:rgba(42,92,60,.95);height:56px">
+            <div class="ad-mock-badge">Verana Parque Alvorada · Marília</div>
+          </div>
+          <div class="ad-mock-photo-label" style="position:relative;z-index:1">↑ Zona livre para headline Meta (200px min)</div>
+        </div>
+        <div class="ad-mock-tarja">
+          <div style="font-size:.7rem;color:rgba(245,244,238,.5);font-weight:600;letter-spacing:.06em;text-transform:uppercase">Logotipo · rodapé 24px borda</div>
+          <div class="ad-mock-logo">VPA</div>
+        </div>
+      </div>
+
+      <div style="flex:1;min-width:240px">
+        <h3 style="font-size:1.125rem;font-weight:700;color:var(--ink);margin-bottom:20px">Zonas do card 1080×1080</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
+          <li style="display:flex;gap:12px;align-items:flex-start">
+            <span style="background:var(--forest);color:var(--paper);font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap">Topo</span>
+            <span style="font-size:.9rem;color:var(--mid)">Tarja verde-floresta 70–80px · pill badge com nome do empreendimento</span>
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start">
+            <span style="background:var(--sky);color:var(--white);font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap">Negativo</span>
+            <span style="font-size:.9rem;color:var(--mid)">Zona limpa ≥200px — céu aberto ou área clara — onde o headline do Meta se sobrepõe</span>
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start">
+            <span style="background:var(--muted);color:var(--white);font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap">Foto</span>
+            <span style="font-size:.9rem;color:var(--mid)">Fotorrealista · luz dourada fim de tarde · pessoas em cenas mundanas</span>
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start">
+            <span style="background:var(--ink);color:var(--paper);font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap">Rodapé</span>
+            <span style="font-size:.9rem;color:var(--mid)">Logo badge branco circular 90px · 24px da borda inferior-direita</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Rules ── -->
+<section id="rules">
+  <div class="wrap">
+    <p class="section-label">05 — Do's &amp; Don'ts</p>
+    <h2 class="section-title">Regras de Aplicação</h2>
+    <p class="section-desc">Seguir para manter consistência visual entre waves e agentes de geração.</p>
+
+    <div class="rules-grid">
+      <div class="rules-card do">
+        <h3>✓ Do</h3>
+        <ul>
+          <li>Foto real do empreendimento como background — nunca render 3D genérico</li>
+          <li>Zona de negativo ≥200px no topo para o headline do Meta</li>
+          <li>Tarja + pill badge em cards com foto escura</li>
+          <li>Coral apenas no elemento mais importante da tela</li>
+          <li>Work Sans 900 em headlines ≤40 chars</li>
+          <li>Escalar verde forest → grass → sage para hierarquia de dados</li>
+          <li>Luz dourada de fim de tarde — nunca midday azul</li>
+          <li>Pessoas em cenas mundanas — nunca olhando para câmera</li>
+        </ul>
+      </div>
+      <div class="rules-card dont">
+        <h3>✗ Don't</h3>
+        <ul>
+          <li>Misturar verde-limão Cipasa <code>#62BB46</code> com verde-floresta VPA na mesma peça</li>
+          <li>Texto no terço central da imagem (área de eye-tracking do feed)</li>
+          <li>Gradiente de texto (<code>background-clip: text</code>)</li>
+          <li>Glassmorphism decorativo</li>
+          <li>Mais de 2 pesos tipográficos por card</li>
+          <li>Side-stripe borders como detalhe decorativo</li>
+          <li>Dois big numbers na mesma tela</li>
+          <li>Lawns supersaturados, cores neon, render fake</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <strong>Cipasa Urbanismo · Verana Parque Alvorada</strong><br>
+      Design system mantido por Agência Iluminar7S · Spec: <a href="https://github.com/google-labs-code/design.md">google-labs-code/design.md</a>
+    </div>
+    <div style="text-align:right">
+      <a href="DESIGN.md">DESIGN.md</a> · <a href="PRODUCT.md">PRODUCT.md</a><br>
+      <span style="opacity:.5;font-size:.8rem">Repositório público sanitizado · sem chaves ou automações</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
