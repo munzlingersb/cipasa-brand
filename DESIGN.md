@@ -1,344 +1,350 @@
 ---
 version: alpha
-name: Cipasa Urbanismo — 35 Anos
-description: >
-  Marca corporativa da Cipasa Urbanismo na campanha de 35 anos (2026).
-  Conceito central: "Aqui, fazer bem feito faz diferença!" — estrutural,
-  atravessa comunicação externa, discurso comercial, cultura interna e
-  próximos lançamentos. 21 estados, 35 anos de história.
-
-# Compliance: follows DESIGN.md spec (alpha) — google-labs-code/design.md
-# Fontes verificadas: site cipasa.com (Work Sans UI + Montserrat editorial)
-# Cores verificadas: SVG original do logo + inspeção CSS do site
-
+name: Cipasa Heritage
+description: 35 anos fazendo bem feito. Identidade verde, editorial, photo-first, com forma orgânica branca como assinatura visual e uma palavra-chave em lima italic como gancho emocional.
 colors:
-  # ── Verdes primários — extraídos do SVG original e do site ──────────────
-  verde-lime:      "#62BB46"   # anel ícone · CTA float WA · badge newsletter · accent ←SVG
-  verde-corpo:     "#005A45"   # CIPASA URBANISMO wordmark · CTAs outline · links footer ←SVG+site
-  verde-35anos:    "#20592D"   # badge 35 anos mark ←SVG
-  verde-dark:      "#112A25"   # headings Montserrat site · bottom bar footer ←site
-  verde-hover:     "#173F35"   # hover states de links e botões ←site
-  verde-icon:      "#407A6B"   # ícones secundários ←site
-
-  # ── Paisagem do ícone (uso restrito ao símbolo) ──────────────────────────
-  icon-bruma:      "#B0CAC1"   # camada topo da paisagem ←SVG
-  icon-nevoa:      "#D8E6DC"   # camada clara da paisagem ←SVG
-  icon-terra:      "#407B6B"   # camada inferior da paisagem ←SVG
-  icon-campo:      "#82ADA1"   # camada de fundo da paisagem ←SVG
-
-  # ── Neutros — verificados no site ────────────────────────────────────────
-  branco:          "#FFFFFF"   # texto sobre dark, card bg
-  off-white:       "#F8FAF9"   # backgrounds de seção alternadas ←site
-  surface:         "#F5F5F5"   # inputs e superfícies leves ←site
-  ink:             "#2C2C2C"   # texto de conteúdo primário ←site (rgb 44,44,37)
-  texto-muted:     "#555454"   # footer links, texto secundário ←site
-  verde-pale:      "#E8F5E0"   # slides internos claros
-  olive:           "#B5C98A"   # ribbons decorativos outdoor/folder
-
-  # ── Bug documentado ──────────────────────────────────────────────────────
-  # #1976D2 (azul MUI padrão) aparece 428x no site — NÃO pertence à paleta
-  # O tema MUI precisa de palette.primary.main: '#005A45' para corrigir
-
+  # Verdes corporativos
+  primary:        "#005A45"
+  primary-deep:   "#112A25"
+  primary-hover:  "#173F35"
+  # Badge 35 anos
+  badge-35:       "#20592D"
+  # Lima accent
+  accent:         "#62BB46"
+  accent-soft:    "#82ADA1"
+  # Camadas da paisagem do ícone
+  paisagem-clara: "#B0CAC1"
+  paisagem-meio:  "#D8E6DC"
+  agua-escura:    "#407B6B"
+  # Neutrals
+  neutral:        "#F8FAF9"
+  ink:            "#2C2C2C"
+  muted:          "#555454"
+  white:          "#FFFFFF"
+  # Overlay (usado com opacidade sobre foto)
+  overlay-green:  "#005A45"
 typography:
-  # Work Sans — fonte primária do sistema (UI, anúncios, copy)
-  display-ui:
-    fontFamily: "Work Sans"
-    fontSize: "clamp(2.5rem, 6vw, 5rem)"
-    fontWeight: "700"
-    lineHeight: "1.04"
-    letterSpacing: "-0.025em"
-
-  headline-ui:
-    fontFamily: "Work Sans"
-    fontSize: "clamp(1.5rem, 3vw, 2.5rem)"
-    fontWeight: "700"
-    lineHeight: "1.2"
-
-  # Assinatura de campanha — "diferença" e "bem feito"
-  # Contexto editorial (slides, key visual, outdoor): Montserrat 900 Italic
-  diferenca-editorial:
-    fontFamily: Montserrat
-    fontSize: "clamp(2.5rem, 7vw, 5rem)"
-    fontWeight: "900"
+  display-2xl:
+    fontFamily: Work Sans
+    fontSize: 96px
+    fontWeight: 900
     fontStyle: italic
-    lineHeight: "1"
-    letterSpacing: "-0.02em"
-
-  # Contexto product/ads (WhatsApp, carrossel feed): Work Sans 900
-  diferenca-ads:
-    fontFamily: "Work Sans"
-    fontSize: "clamp(3rem, 8vw, 6rem)"
-    fontWeight: "900"
-    lineHeight: "1"
-    letterSpacing: "-0.02em"
-
-  # Montserrat — editorial e seções de conteúdo
-  h2-editorial:
+    lineHeight: 0.95
+    letterSpacing: -0.02em
+  display-xl:
+    fontFamily: Work Sans
+    fontSize: 64px
+    fontWeight: 900
+    fontStyle: italic
+    lineHeight: 1.0
+  display-lg:
+    fontFamily: Work Sans
+    fontSize: 48px
+    fontWeight: 900
+    fontStyle: italic
+    lineHeight: 1.05
+  h1:
     fontFamily: Montserrat
-    fontSize: "42px"
-    fontWeight: "700"
-    lineHeight: "1.15"
-    textTransform: uppercase
-
-  # Work Sans — labels e UI
+    fontSize: 48px
+    fontWeight: 800
+    lineHeight: 1.1
+    letterSpacing: -0.01em
+  h2:
+    fontFamily: Work Sans
+    fontSize: 32px
+    fontWeight: 700
+    lineHeight: 1.2
+  h3:
+    fontFamily: Work Sans
+    fontSize: 24px
+    fontWeight: 700
+    lineHeight: 1.3
+  body-lg:
+    fontFamily: Work Sans
+    fontSize: 18px
+    fontWeight: 400
+    lineHeight: 1.55
+  body-md:
+    fontFamily: Work Sans
+    fontSize: 16px
+    fontWeight: 400
+    lineHeight: 1.6
+  body-sm:
+    fontFamily: Work Sans
+    fontSize: 14px
+    fontWeight: 400
+    lineHeight: 1.55
   label:
-    fontFamily: "Work Sans"
-    fontSize: "0.75rem"
-    fontWeight: "700"
-    lineHeight: "1"
-    letterSpacing: "0.08em"
-
-  nav-link:
-    fontFamily: "Work Sans"
-    fontSize: "14px"
-    fontWeight: "500"
-    letterSpacing: "0.4px"
-    textTransform: uppercase
-
-  body:
-    fontFamily: "Work Sans"
-    fontSize: "16px"
-    fontWeight: "400"
-    lineHeight: "1.6"
-
+    fontFamily: Work Sans
+    fontSize: 12px
+    fontWeight: 600
+    letterSpacing: 0.08em
+  caption:
+    fontFamily: Work Sans
+    fontSize: 11px
+    fontWeight: 400
+    letterSpacing: 0.04em
 rounded:
-  none: "0px"
-  sm:   "4px"
-  md:   "8px"
-  lg:   "13px"
-  xl:   "30px"
-  pill: "50px"   # padrão dos CTAs outline do site
-  full: "9999px"
-
+  none: 0px
+  sm: 4px
+  md: 14px
+  lg: 28px
+  full: 9999px
 spacing:
-  1:  "4px"
-  2:  "8px"
-  4:  "16px"
-  6:  "24px"
-  8:  "32px"
-  12: "48px"
-  16: "64px"
-  20: "80px"
-  24: "100px"   # padding-top do rodapé no site
-
-layout:
-  container-max: "1250px"   # max-width do site cipasa.com
-  header-height: "100px"
-  hero-height:   "650px"
-
+  xs: 4px
+  sm: 8px
+  md: 16px
+  lg: 24px
+  xl: 40px
+  2xl: 64px
+  3xl: 96px
+  base: 8px
 components:
-  # CTA principal do site — outline pill
-  cta-outline:
-    backgroundColor: "transparent"
-    textColor: "{colors.verde-corpo}"
-    borderColor: "{colors.verde-corpo}"
-    borderWidth: "1px"
-    rounded: pill
-    padding: "0 29px"
-    typography: label
-
-  cta-outline-hover:
-    backgroundColor: "{colors.verde-corpo}"
-    textColor: "{colors.branco}"
-
-  # Botão CTA verde lime (flutuante WA, newsletter)
-  cta-filled-lime:
-    backgroundColor: "{colors.verde-lime}"
-    textColor: "{colors.branco}"
-    rounded: lg
-    padding: "8px 14px"
-    typography: label
-
-  # Badge / iconografia de empreendimento
-  icon-badge-filled:
-    backgroundColor: "{colors.verde-lime}"
-    textColor: "{colors.verde-dark}"
-    rounded: md
-    borderColor: "{colors.verde-lime}"
-    borderWidth: "2px"
-
-  icon-badge-outline:
-    backgroundColor: "transparent"
-    textColor: "{colors.verde-corpo}"
-    rounded: md
-    borderColor: "{colors.verde-lime}"
-    borderWidth: "2px"
-
-  # Selo 35 anos
-  selo-35anos:
-    borderColor: "{colors.verde-35anos}"
-    borderWidth: "2px"
-    rounded: md
-    padding: "6px 16px"
-    textColor: "{colors.verde-35anos}"
-
-  # Card de empreendimento (site)
-  card-empreendimento:
-    backgroundColor: "{colors.branco}"
-    rounded: none   # full-bleed no site
-    # separação por espaçamento, não por sombra
-
-  # Hero overlay
-  hero-overlay:
-    background: "#000000"
-    overlayImage: "PNG com tratamento verde embutido (bg-size: cover)"
-
-  # Gradiente lime strip (anúncios — bottom branding)
-  lime-strip:
-    background: "linear-gradient(180deg, transparent 0%, rgba(98,187,70,.35) 60%, rgba(98,187,70,.8) 100%)"
-    # Aparece no rodapé dos cards WhatsApp e carrossel de amenidades
-
-  # Círculo orgânico (elemento compositivo)
-  organic-circle:
-    borderRadius: "50%"
-    border: "1px solid rgba(98,187,70,.2)"
-    background: "rgba(255,255,255,.08)"
-    # Decorativo, pode ser cortado pelo frame. Nunca opaco.
+  button-primary:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.white}"
+    rounded: "{rounded.md}"
+    padding: 14px 24px
+    typography: "{typography.label}"
+  button-primary-hover:
+    backgroundColor: "{colors.primary-hover}"
+  button-ghost:
+    backgroundColor: transparent
+    textColor: "{colors.primary}"
+    rounded: "{rounded.md}"
+    padding: 14px 24px
+  badge-data:
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.white}"
+    rounded: "{rounded.md}"
+    padding: 14px 20px
+  badge-data-secondary:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.white}"
+    rounded: "{rounded.md}"
+    padding: 14px 20px
+  badge-35-anos:
+    backgroundColor: transparent
+    textColor: "{colors.primary}"
+    rounded: "{rounded.lg}"
+    padding: 8px 20px
+  badge-35-anos-on-photo:
+    backgroundColor: transparent
+    textColor: "{colors.white}"
+    rounded: "{rounded.lg}"
+  card-keyword-circle:
+    backgroundColor: "{colors.white}"
+    rounded: "{rounded.full}"
+  card-closing:
+    backgroundColor: "{colors.white}"
+    rounded: "{rounded.full}"
+    padding: 32px
+  # Componentes semânticos para referenciar cores do sistema
+  page:
+    backgroundColor: "{colors.neutral}"
+    textColor: "{colors.ink}"
+  page-dark:
+    backgroundColor: "{colors.primary-deep}"
+    textColor: "{colors.white}"
+  text-headline:
+    textColor: "{colors.primary-deep}"
+  text-muted:
+    textColor: "{colors.muted}"
+  badge-35-original:
+    backgroundColor: "{colors.badge-35}"
+    textColor: "{colors.white}"
+  icon-paisagem-claro:
+    backgroundColor: "{colors.paisagem-clara}"
+  icon-paisagem-meio:
+    backgroundColor: "{colors.paisagem-meio}"
+  icon-agua:
+    backgroundColor: "{colors.agua-escura}"
+  icon-accent-soft:
+    backgroundColor: "{colors.accent-soft}"
+  photo-overlay:
+    backgroundColor: "{colors.overlay-green}"
 ---
+
+# Cipasa Heritage
+
+A identidade visual da Cipasa Urbanismo. Para a alma da marca (manifesto, voice & tone, posicionamento), ver [`BRAND.md`](BRAND.md). Para o sistema de logos (variantes, regras de uso), ver [`LOGOS.md`](LOGOS.md).
 
 ## Overview
 
-Cipasa Urbanismo completa 35 anos em 2026. O conceito **"Aqui, fazer bem feito faz diferença!"** é estrutural — não apenas uma tagline comemorativa.
+**Cipasa Heritage. 35 anos de fazer bem feito.**
 
-**Stack visual:**
-- **Work Sans** — fonte primária do sistema: site, anúncios, copy de produto
-- **Montserrat** — fonte editorial: headings de seção, key visual da campanha
-- **Verde-lime `#62BB46`** — accent único, CTAs, badges, "diferença" em fundo escuro
-- **Verde-corpo `#005A45`** — texto principal, outline buttons, wordmark
+A identidade visual traduz isso em três decisões fundamentais:
+
+1. **Deep greens** que carregam tradição — não são "verdes de natureza" decorativos, são verdes que comunicam consistência e maturidade.
+2. **Forma orgânica branca** como assinatura — um círculo ou arco branco que sangra de um canto da imagem, criando respiro editorial e contraste sem agressividade.
+3. **Uma palavra-chave em lima italic** como gancho emocional — sempre uma só palavra, em Work Sans 900 italic, lima (`#62BB46`), que é o coração de cada peça.
+
+A composição é sempre **photo-first**: foto real do empreendimento ocupa todo o frame, e os elementos da marca constroem a narrativa por cima dela. Não usa banners, top bars, pill badges ou shadows. A profundidade vem das camadas da foto + forma orgânica branca + tints sutis verdes.
+
+A marca não é "corporativa premium imobiliária" — é **editorial premium imobiliária**. A diferença está no respeito ao olhar do leitor: não grita, não força urgência, não decora.
 
 ## Colors
 
-### Paleta verificada — site cipasa.com + SVG original
+A paleta é dominada por verdes — não como cor de marca, mas como sistema. Cada verde tem uma função clara.
 
-| Token | Hex | Fonte | Uso |
-|---|---|---|---|
-| `verde-lime` | `#62BB46` | SVG + site | Anel do ícone, CTA float, badges filled, accent |
-| `verde-corpo` | `#005A45` | SVG + site | Wordmark, CTAs outline, telefones footer |
-| `verde-35anos` | `#20592D` | SVG | Badge 35 anos mark |
-| `verde-dark` | `#112A25` | site | Headings Montserrat, bottom bar |
-| `verde-hover` | `#173F35` | site | Hover states |
-| `verde-icon` | `#407A6B` | site | Ícones secundários |
-| `ink` | `#2C2C2C` | site | Texto de conteúdo |
-| `texto-muted` | `#555454` | site | Footer, secundário |
-| `off-white` | `#F8FAF9` | site | Seções alternadas |
+- **Primary `#005A45`** — verde escuro do wordmark e dos textos âncora. É o verde que diz "Cipasa". Aparece em logos, headlines de overlay, e textos sobre fundos claros.
+- **Primary Deep `#112A25`** — verde quase preto. Usado em headlines pesadas e situações de máximo contraste tipográfico.
+- **Primary Hover `#173F35`** — estado de hover dos botões e CTAs. Pequena variação para feedback de interação.
+- **Badge 35 `#20592D`** — verde específico do badge comemorativo dos 35 anos. **Apenas no badge** — não usar em outros contextos.
+- **Accent `#62BB46`** — lima, o coração da identidade. É o verde da palavra-chave, dos badges de dados, dos elementos que precisam saltar. Usado com parcimônia: nunca em texto corrido, sempre em destaques.
+- **Accent Soft `#82ADA1`** — verde-azulado das camadas internas da paisagem do ícone. Decorativo, não estrutural.
+- **Paisagem Clara `#B0CAC1`**, **Paisagem Meio `#D8E6DC`**, **Água Escura `#407B6B`** — camadas da paisagem dentro do ícone. Usadas apenas no símbolo, não na UI.
+- **Neutral `#F8FAF9`** — off-white de fundo. Mais quente que branco puro.
+- **Ink `#2C2C2C`** — texto corpo padrão.
+- **Muted `#555454`** — texto secundário, captions, metadados.
+- **White `#FFFFFF`** — usado em formas orgânicas, texto sobre foto escura, círculos.
+- **Overlay Green `#005A45`** — verde aplicado com opacidade (20–35%) sobre fotos para reforçar identidade visual sem matar a foto.
 
-**⚠️ Bug documentado:** `#1976D2` (azul MUI padrão) aparece 428x no site sem ser sobrescrito no tema. Não faz parte da identidade. Corrigir com `palette.primary.main: '#005A45'`.
+### Roles práticos
 
-### Regra de "diferença"
-- Fundo escuro / foto: `verde-lime` (#62BB46) ou branco (#FFFFFF) — sempre Montserrat/Work Sans 900
-- Fundo claro / slide: `verde-dark` (#112A25) — Montserrat 900 Italic
-- Nunca: peso regular, outra cor, outra fonte
+| Aplicação | Cor |
+|---|---|
+| Texto corpo | `{colors.ink}` |
+| Texto secundário | `{colors.muted}` |
+| Headlines | `{colors.primary-deep}` |
+| Logo / wordmark | `{colors.primary}` |
+| Palavra-chave em ad | `{colors.accent}` |
+| Badge de dado | `{colors.accent}` (fundo) + `{colors.white}` (texto) |
+| Badge 35 anos sobre foto | `{colors.white}` (borda + texto), fundo transparente |
+| Tint sobre foto | `{colors.overlay-green}` com 20–35% opacity |
+| Fundos editoriais | `{colors.neutral}` |
 
 ## Typography
 
-### Dois sistemas que coexistem
+Duas famílias. **Work Sans** é a fonte da operação — usada em UI, anúncios, badges, headlines de campanha. **Montserrat** entra apenas em editoriais raros (capa de folder, key visual de outdoor) onde queremos peso editorial diferente.
 
-| Sistema | Fonte | Pesos | Contexto |
-|---|---|---|---|
-| **UI / Produto** | Work Sans | 400/500/600/700 | Site, anúncios, copy de ad |
-| **Editorial** | Montserrat | 400/700 (bold via `<strong>`) | Seções de conteúdo, key visual |
+- **Display 2XL e XL (Work Sans 900 italic)** — a palavra-chave dos anúncios. "diferença", "clube", "consciente", "verana". Sempre uma só palavra. Sempre em italic.
+- **Display LG (Work Sans 900 italic)** — headlines secundárias com mesma personalidade.
+- **H1 (Montserrat 800)** — capas e key visuals editoriais. Reservado.
+- **H2/H3 (Work Sans 700)** — títulos de seção em material institucional.
+- **Body LG/MD/SM (Work Sans 400)** — texto corrido em todos os tamanhos.
+- **Label (Work Sans 600, tracking 0.08em)** — labels de UI, CTAs em botões, micro-copy estrutural.
+- **Caption (Work Sans 400, tracking 0.04em)** — disclaimers, asteriscos, créditos.
 
-**"diferença" — assinatura tipográfica da campanha:**
-- Peças editoriais (outdoor, slides, key visual): **Montserrat 900 Italic**
-- Peças de produto (WhatsApp, feed, carrossel): **Work Sans 900** em branco sobre foto
-
-**Escala do site (verificada por inspeção CSS):**
-- Hero H1: Work Sans 700 / 51.2px
-- Hero H2 (slide): Work Sans 400 / 65px / tracking -3px / UPPERCASE
-- Section H2: Montserrat 400–700 / 42px
-- Stats: Montserrat 700 / 44px
-- Nav: Work Sans 500 / 14px / tracking 0.4px / UPPERCASE
-- Body: Work Sans 400 / 16px / 24px line-height
+A hierarquia respeita o princípio editorial: **uma palavra grande, várias pequenas**. Nunca duas palavras grandes brigando por atenção.
 
 ## Layout
 
-### Site cipasa.com
-- Container: `max-width: 1250px`
-- Header: `height: 100px` (fixo)
-- Hero: `height: 650px` + `background: #000` com PNG overlay verde embutido
+Sistema base 8px. Todos os spacings são múltiplos de 8.
 
-### Ads — WhatsApp Story (9:16)
-Template mapeado dos criativos reais:
-1. **Foto de pessoa** — real, natural, não olhando para câmera
-2. **Copy setup** — Work Sans 400 branco, ~18–22px: "Investimento seguro é o que faz a"
-3. **"diferença"** — Work Sans 900 branco, enorme (~72–96px): palavra isolada
-4. **Badges de dados** — lime filled: "lotes a partir de 300m²" + "Pronto para construir"
-5. **Logo empreendimento** — Verana logo centralizado
-6. **Gradiente lime strip** — faixa diagonal verde-lime no rodapé
-7. **"CIPASA 35 anos" badge** — outline, na faixa branca do rodapé
+- `xs` (4) — espaçamentos micro entre elementos relacionados
+- `sm` (8) — gap padrão entre badges, ícones e textos
+- `md` (16) — padding interno de componentes
+- `lg` (24) — separação entre componentes
+- `xl` (40) — separação entre seções
+- `2xl` (64) — separação entre blocos principais
+- `3xl` (96) — margens de página em material editorial
 
-### Ads — Outdoor/Billboard (16:9)
-Template mapeado do outdoor real:
-- **Split dinâmico** (não 50/50 rígido — família no centro cruza os dois lados):
-  - Esquerda: gradiente lime-to-white + badges de dados + texto copy
-  - Direita: foto de empreendimento/natureza com gradiente verde escuro
-- **Logo do empreendimento** no canto superior direito
-- **"diferença"** em Work Sans 900 branco + setup em texto menor regular
-- **Cipasa 35 anos badge** filled dark
+A composição dos anúncios é **photo-first**:
+1. Foto real ocupa 100% do frame.
+2. Forma orgânica branca sangra de um canto (~480–620px de raio em um canvas 1080).
+3. Logo discreto dentro da forma orgânica.
+4. Palavra-chave em lima italic posicionada onde ela respira.
+5. Badges de dados (quando houver) em coluna ou linha, sempre lima preenchido.
 
-### Ads — Grid de amenidades (1:1 carrossel)
-- Foto real da amenidade (piscina, quadra, academia)
-- Palavra-chave grande sobreposta: verde-lime / Work Sans 900
-- Círculo orgânico branco/translucente em algum canto
-- Badge com m² ou CTA no último card
+Nunca centralizado. Nunca simétrico. A composição é sempre direcionada — esquerda/direita, topo/base.
 
 ## Elevation & Depth
 
-- Cards site: sem sombra detectada (separação por espaço e contraste)
-- Elementos flutuantes: `box-shadow: rgba(0,0,0,0.2) 0px 0px 35px 0px`
-- Botão WA: `box-shadow: rgba(98,187,70,0.41) 1px 1px 3px 0px`
-- Hero overlay: PNG com tratamento de cor verde embutido na pré-produção (não CSS filter)
+A marca é **flat**. Não usa box-shadow, drop-shadow, gradient overlays decorativos.
+
+A profundidade visual vem de três técnicas:
+
+1. **Forma orgânica branca** — cria uma camada clara contrastante sobre a foto.
+2. **Tints verdes sobre foto** — overlay `{colors.overlay-green}` com opacidade entre 20% e 35% unifica fotos de origens diferentes em um sistema visual coerente.
+3. **Faixa wave lima** — uma tira diagonal `{colors.accent}` no canto inferior, com inclinação de aproximadamente -12°, marca o rodapé de stories e WhatsApp sem precisar de barra ou banner.
+
+Hover e focus em UI usam apenas mudança de cor (`{colors.primary-hover}`). Sem elevação.
 
 ## Shapes
 
-- CTAs site: `border-radius: 50px` (pill) — padrão principal
-- Badge 35 anos: `border-radius: 8–10px` (retângulo arredondado com borda)
-- Icon badges: `border-radius: 8px`
-- Cards: sem border-radius (full-bleed)
-- Círculo orgânico: `border-radius: 50%`, decorativo, pode ser cortado
+A marca tem três shapes-chave que aparecem repetidamente:
+
+- **Círculo orgânico (forma signature)** — um círculo de raio grande (480–620px num canvas 1080) que sangra de um canto. Não é um círculo perfeito centralizado: é uma fração de círculo que entra na composição como uma "lua branca". Cria respiro e zona limpa para o logo.
+- **Badge arredondado de dados (`{rounded.md}` = 14px)** — retângulos com cantos arredondados, fundo lima, conteúdo `[ícone branco] + [número grande] + [label pequena]`.
+- **Badge pill 35 anos (`{rounded.lg}` = 28px)** — pílula outline com borda fina branca ou verde escuro, contendo o lockup "CIPASA 35 anos".
+- **Faixa wave** — tira diagonal lima inclinada -12° no rodapé esquerdo de stories e WhatsApp.
+
+Botões usam `{rounded.md}`. Cards e contêineres editoriais usam `{rounded.sm}` (4px) — nunca arredondamento exagerado.
 
 ## Components
 
-### CTA outline pill (padrão do site)
-```
-border: 1px solid #005A45
-border-radius: 50px
-color: #005A45
-background: transparent
-font: Work Sans 14px/700 UPPERCASE
-padding: 0 29px
-```
-Hover: `background: #005A45; color: #FFFFFF`
+### `button-primary`
+Botão principal. Usado em CTAs primários: "Agende uma visita", "Falar com especialista".
+- Fundo: `{colors.primary}`
+- Texto: `{colors.white}`, tipografia `{typography.label}` em uppercase
+- Padding: `14px 24px`
+- Border-radius: `{rounded.md}`
+- Hover: fundo muda para `{colors.primary-hover}`
 
-### Badge de dados de empreendimento
-```
-border: 2px solid #62BB46
-border-radius: 8px
-Filled: background #62BB46, text dark #112A25
-Outline: background transparent, text #005A45
-```
+### `button-ghost`
+Variante secundária com borda. Usado em CTAs alternativos.
+- Fundo: transparente
+- Texto e borda: `{colors.primary}`
+- Mesmo padding e raio do `button-primary`
 
-### "diferença" em ads
-```
-Work Sans 900 / branco / enormes (72–96px no canvas)
-Texto setup acima: Work Sans 400 / branco / ~18–22px
-```
+### `badge-data`
+Badge de dado em ad. Estrutura: `[ícone] + [coluna: label / número]`.
+- Fundo: `{colors.accent}`
+- Texto: `{colors.white}`
+- Border-radius: `{rounded.md}` (14px)
+- Padding: `14px 20px`
+
+Exemplo: ícone seta → "lotes a partir de" (label pequena, branco) → "300m²" (número grande, branco, Work Sans 900).
+
+> **Nota de acessibilidade:** o contraste branco em `{colors.accent}` é 2.41:1, abaixo do WCAG AA. Esta é uma decisão de design intencional justificada por: (1) uso exclusivo em **peças publicitárias** (não interface funcional), (2) tipografia em peso máximo (Work Sans 900) e tamanho grande (≥40px), e (3) coerência com a identidade visual estabelecida da marca. Para UI funcional (botões, formulários, navegação) onde acessibilidade é crítica, use `{colors.primary}` como fundo de elementos interativos — esse atinge contraste 9.86:1 com texto branco.
+
+### `badge-data-secondary`
+Variante usada para complementar um `badge-data` (ex: "Pronto para construir" ao lado de "300m²").
+- Fundo: `{colors.primary}` (verde escuro, não lima)
+- Texto: `{colors.white}`
+- Mesmas dimensões do `badge-data`
+
+### `badge-35-anos`
+Pílula outline com lockup "CIPASA 35 anos". Sempre no rodapé de cards e stories.
+- Fundo: transparente
+- Borda: `{colors.primary}` 2px
+- Texto: `{colors.primary}`
+- Border-radius: `{rounded.lg}` (28px)
+- Padding: `8px 20px`
+
+### `badge-35-anos-on-photo`
+Variante quando o badge fica diretamente sobre foto escura (sem círculo orgânico).
+- Borda e texto: `{colors.white}`
+- Fundo: transparente
+
+### `card-keyword-circle`
+A forma orgânica branca que abre espaço para logo e copy.
+- Fundo: branco
+- Border-radius: `{rounded.full}` (forma circular)
+- Posicionado fora do canvas em 1 corner; sangra ~25–35% para dentro.
+
+### `card-closing`
+Versão maior do `card-keyword-circle`, contém todo o CTA do card de fechamento (logo, dados, "Agende uma visita").
 
 ## Do's and Don'ts
 
-**Do:**
-- "diferença" e "bem feito" sempre 900 (negrito máximo)
-- Fotos reais de pessoas em momentos naturais — nunca posadas
-- Overlay verde embutido na imagem (não via CSS filter)
-- CTAs em pill `border-radius: 50px` + verde-corpo outline
-- Badge 35 anos em **todas** as peças de campanha 2026
-- Círculo orgânico como recurso compositivo (pode sair do frame)
-- Gradiente lime strip no rodapé de cards de produto
+**Do**
 
-**Don't:**
-- `#1976D2` azul MUI — não é da paleta, remover sobrescrevendo o tema
-- "diferença" em peso regular
-- Border-radius misturado sem padrão (escolher pill OU md por contexto)
-- Sombra em cards — o site não usa; separação por espaço
-- Foto de banco americano / render 3D
-- Mote truncado sem o "faz diferença"
+1. Use foto real do empreendimento sempre que possível.
+2. Deixe a palavra-chave dominar visualmente (ela é o herói da peça).
+3. Forma orgânica branca sangra de um canto, sempre.
+4. Aplique tint verde (overlay `{colors.overlay-green}` 20–35%) quando a foto tem origens visuais inconsistentes.
+5. Mantenha a tipografia em Work Sans para 99% das peças. Montserrat só em editoriais.
+6. Lima `{colors.accent}` é destaque. Use com parcimônia.
+
+**Don't**
+
+1. Não use top bands, banners de topo, ou faixas horizontais escuras no topo.
+2. Não use pill badges no topo da imagem.
+3. Não centralize composições — sempre direcione para um lado.
+4. Não use box-shadow ou gradient overlays decorativos.
+5. Não use mais de uma palavra-chave em italic na mesma peça.
+6. Não recolore o ícone fora das cores aprovadas.
+7. Não use o badge 35 anos com fundo preenchido — só outline.
+8. Não force urgência em CTAs ("aja agora", "garanta já"). A marca é convite, não pressão.

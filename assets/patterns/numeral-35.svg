@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="280" height="280"
+     viewBox="0 0 280 280"
+     fill="none"
+     role="img"
+     aria-labelledby="t d">
+  <title id="t">Numeral 35 — Cipasa</title>
+  <desc id="d">Símbolo aniversário em destaque: o "35" estilizado em verde escuro, usado como elemento celebrativo isolado em key visuals da campanha de 35 anos. Inspirado no badge integrado, mas em escala maior e isolado.</desc>
+
+  <g id="numeral-35">
+    <!-- "3" -->
+    <path id="tres" fill="#20592D"
+          d="M 30 60 Q 30 30, 70 30 Q 110 30, 110 60 Q 110 80, 90 90
+             Q 110 100, 110 130 Q 110 170, 70 170 Q 40 170, 30 145
+             L 50 138 Q 56 152, 70 152 Q 90 152, 90 130 Q 90 110, 70 110
+             L 60 110 L 60 92 L 70 92 Q 90 92, 90 70 Q 90 50, 70 50
+             Q 56 50, 52 64 Z"/>
+    <!-- "5" -->
+    <path id="cinco" fill="#20592D"
+          d="M 130 30 L 200 30 L 200 50 L 150 50 L 148 90
+             Q 160 80, 175 80 Q 215 80, 215 125 Q 215 170, 175 170
+             Q 145 170, 130 145 L 150 138 Q 160 152, 175 152
+             Q 195 152, 195 125 Q 195 100, 175 100 Q 158 100, 145 110
+             L 130 105 Z"/>
+  </g>
+
+  <!--
+    Variantes via fill:
+      Verde escuro:    #20592D (default)
+      Branco:          #FFFFFF (sobre fundo escuro)
+      Lima:            #62BB46 (key visual destaque)
+
+    Notas:
+      Este é um pictograma estilizado simplificado. Para o badge oficial integrado
+      ("CIPASA 35 anos"), use assets/logos/cipasa-35anos-badge.svg que tem o desenho
+      original da identidade.
+  -->
+</svg>

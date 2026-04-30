@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1080" height="200"
+     viewBox="0 0 1080 200"
+     fill="none"
+     role="img"
+     aria-labelledby="t d">
+  <title id="t">Padrão Faixa Wave Lima — Cipasa</title>
+  <desc id="d">Tira diagonal lima (#62BB46) inclinada -12° que aparece no rodapé esquerdo de stories e WhatsApp. Marca o rodapé sem precisar de barra horizontal. ~80px de espessura na visual final.</desc>
+
+  <g id="wave-lima">
+    <!-- Tira diagonal principal -->
+    <path id="tira" fill="#62BB46"
+          d="M -50 200 L -50 100 L 600 0 L 600 100 Z"
+          transform="rotate(-12 540 100)"/>
+  </g>
+
+  <!--
+    Posicionamento típico:
+      Em ad 1080x1080: aplicar este pattern no canto inferior esquerdo, ocupando ~60-80px de altura.
+      Em story 1080x1920: aplicar no rodapé, antes dos logos.
+  -->
+</svg>

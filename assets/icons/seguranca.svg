@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="32" height="32"
+     viewBox="0 0 32 32"
+     fill="none"
+     role="img"
+     aria-labelledby="t d">
+  <title id="t">Ícone Segurança</title>
+  <desc id="d">Pictograma de escudo com check, representando portaria 24h e segurança do condomínio. Estilo linear.</desc>
+  <g id="seguranca" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M16 4 L26 8 L26 16 C26 22 21 27 16 28 C11 27 6 22 6 16 L6 8 Z"/>
+    <path d="M11 16 L15 20 L21 13"/>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1080" height="1080"
+     viewBox="0 0 1080 1080"
+     fill="none"
+     role="img"
+     aria-labelledby="t d">
+  <title id="t">Padrão Círculo Orgânico — Cipasa</title>
+  <desc id="d">A forma signature da marca Cipasa: um círculo branco grande sangrando do canto superior direito de um canvas 1080x1080. Centro do círculo em (1080,0), raio 600px. A área visível dentro do canvas é uma fração (~30%) que cria a zona limpa para logo e copy nos anúncios.</desc>
+
+  <!-- Canvas de referência (foto vai aqui no uso real) -->
+  <rect id="canvas-ref" width="1080" height="1080" fill="#005A45" opacity="0.15"/>
+
+  <!-- Círculo orgânico — sangra do canto superior direito -->
+  <g id="circulo-organico">
+    <circle cx="1080" cy="0" r="600" fill="#FFFFFF"/>
+  </g>
+
+  <!--
+    Variantes possíveis (ajuste cx, cy):
+      top-right     → cx="1080" cy="0"
+      top-left      → cx="0"    cy="0"
+      bottom-right  → cx="1080" cy="1080"
+      bottom-left   → cx="0"    cy="1080"
+      left-center   → cx="0"    cy="540"
+      right-center  → cx="1080" cy="540"
+
+    Raio sugerido: 480-620px (em canvas 1080).
+    Para Stories 1080x1920, usar mesmo raio mas reposicionar centros.
+  -->
+</svg>

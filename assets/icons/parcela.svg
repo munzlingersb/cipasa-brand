@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="32" height="32"
+     viewBox="0 0 32 32"
+     fill="none"
+     role="img"
+     aria-labelledby="t d">
+  <title id="t">Ícone Parcela / Pagamento</title>
+  <desc id="d">Pictograma de calendário com check, representando parcelamento (240x sem juros). Estilo linear.</desc>
+  <g id="parcela" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <rect x="5" y="7" width="22" height="20" rx="2"/>
+    <path d="M11 4 L11 10"/>
+    <path d="M21 4 L21 10"/>
+    <path d="M5 13 L27 13"/>
+    <path d="M11 19 L15 23 L21 17"/>
+  </g>
+</svg>
