@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="90mm" height="50mm" viewBox="0 0 360 200" role="img" aria-labelledby="t d">
+  <title id="t">Template Cartão de Visita Cipasa</title>
+  <desc id="d">Cartão de visita 90×50mm (formato padrão). Frente com logo + lima accent, verso com dados.</desc>
+
+  <defs>
+    <style>
+      .canvas { fill: #FFFFFF; }
+      .accent { fill: #62BB46; }
+      .text-primary { fill: #005A45; font-family: 'Work Sans', sans-serif; }
+      .text-muted { fill: #555454; font-family: 'Work Sans', sans-serif; }
+      .label-mini { fill: #94A09B; font-family: 'Work Sans', sans-serif; font-size: 6px; }
+      .bleed { stroke: #FF6B6B; stroke-width: 0.5; stroke-dasharray: 2 2; fill: none; }
+      .safe-zone { stroke: #94A09B; stroke-width: 0.5; stroke-dasharray: 2 2; fill: none; }
+    </style>
+  </defs>
+
+  <rect class="canvas" width="360" height="200"/>
+
+  <!-- Sangra -->
+  <rect class="bleed" x="0" y="0" width="360" height="200"/>
+  <!-- Safe zone (3mm de cada borda) -->
+  <rect class="safe-zone" x="12" y="12" width="336" height="176"/>
+
+  <!-- Faixa lima esquerda (assinatura visual) -->
+  <rect class="accent" x="0" y="0" width="20" height="200"/>
+
+  <!-- Logo Cipasa (placeholder) -->
+  <rect x="40" y="30" width="120" height="40" fill="#005A45" opacity="0.1"/>
+  <text class="text-primary" font-size="14" font-weight="700" x="46" y="55">[CIPASA LOGO]</text>
+
+  <!-- Nome -->
+  <text class="text-primary" font-size="13" font-weight="700" x="40" y="100">Nome Sobrenome</text>
+  <text class="text-muted" font-size="9" x="40" y="115">Cargo / Função</text>
+
+  <!-- Contatos -->
+  <text class="text-muted" font-size="8" x="40" y="140">+55 11 9999 9999</text>
+  <text class="text-muted" font-size="8" x="40" y="153">nome@cipasa.com.br</text>
+  <text class="text-muted" font-size="8" x="40" y="166">cipasa.com.br</text>
+
+  <!-- Specs (label off canvas) -->
+  <text class="label-mini" x="280" y="195">90×50mm · 3mm sangra · 350g</text>
+</svg>

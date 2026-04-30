@@ -348,3 +348,89 @@ Versão maior do `card-keyword-circle`, contém todo o CTA do card de fechamento
 6. Não recolore o ícone fora das cores aprovadas.
 7. Não use o badge 35 anos com fundo preenchido — só outline.
 8. Não force urgência em CTAs ("aja agora", "garanta já"). A marca é convite, não pressão.
+
+## Layout Templates
+
+A marca tem 4 sistemas de layout para criativos digitais (descritos em [`CREATIVES.md`](CREATIVES.md)) e um conjunto de templates físicos (descritos em [`PHYSICAL.md`](PHYSICAL.md)).
+
+### Os 4 layouts digitais
+
+| Tipo | Quando | Componentes principais |
+|---|---|---|
+| **A — Circle + Keyword** | Lifestyle (clube, relaxante, friozinho, amigos) | foto + círculo orgânico + keyword única em lima italic |
+| **B — "diferença" Impact** | Aspiracional/value driven | foto + tint + headline 3-linhas + keyword hero (lima OU branca) + badges + 35 anos |
+| **C — Data Badges Story** | Racional, formato vertical | story 9:16 + 3 badges lima empilhados + CTA + wave strip |
+| **D — Closing CTA** | Conversão, fim de carrossel | círculo grande inf-esq + tudo dentro: dados + logos + CTA |
+
+### Templates SVG editáveis
+
+Pasta `assets/templates/`:
+
+- `template-feed-1x1.svg` — 1080×1080 (layouts A, B, D)
+- `template-story-9x16.svg` — 1080×1920 (layouts B vertical, C)
+- `template-outdoor-8x3.svg` — 4800×1800 (B expandido para mídia OOH)
+- `template-folder-a4.svg` — A4 dobrado em 3 (folder editorial)
+- `template-cartao-visita.svg` — 90×50mm (papelaria)
+- `template-papel-timbrado.svg` — A4 (correspondência institucional)
+
+Cada template tem guides verde-lima dashed (safe zones), verde-lima solid (posições do círculo orgânico), vermelho dashed (danger zones), e boxes preenchidos marcando onde cada elemento (logo, keyword, headline, badges, CTA) deve viver.
+
+## Channel-specific Rules
+
+Ajustes da identidade por canal de aplicação.
+
+### Mídia paga digital (Meta Ads, Google Ads)
+
+- Texto crítico fora dos primeiros 200px do topo (UI Instagram cobre)
+- Texto crítico fora dos últimos 280px da base em stories (botão "Enviar mensagem")
+- Tipografia mínima: 22px (corpo), 14px (label), 60px (keyword italic)
+- Tint verde overlay: **20%** (foto coerente) / **30%** (multi-source) / **35%** (foto escura)
+- Logo Verana sempre dentro do círculo orgânico, exceto em `closing card` onde tudo vai dentro do círculo
+
+### Web
+
+- Tipografia escala automaticamente: `display-2xl` → 96px desktop, 56px tablet, 40px mobile
+- Botões: padding sempre `14px 24px` desktop, `12px 18px` mobile
+- Forma orgânica branca: ajustar raio para 35% da largura da viewport
+- Hover states usam `{colors.primary-hover}` exclusivamente (não shadow)
+
+### Email transacional
+
+- Largura útil: 600px máximo
+- Sem foto de fundo full-bleed (compatibilidade Outlook) — usar bloco com cor sólida + foto separada
+- Tipografia fallback: `Arial`, `Helvetica`, `sans-serif` (Work Sans não carrega em alguns clientes)
+- Botão CTA: tabela HTML com `bgcolor` direto
+
+### Outdoor / Mídia OOH
+
+- Cor: perfil **CMYK**, não RGB. Verde primary `#005A45` ≈ `C100 M0 Y50 K65`
+- Resolução: 300dpi para impressão grande
+- Margens de segurança: 120px de cada borda (estrutura, fixação)
+- Tipografia mínima legível a 100m: stroke ~40cm equivalente (display-2xl = 280–400px no render 4800×1800)
+
+### Material impresso (folder, papelaria, merch)
+
+- Cor: perfil **CMYK** com prova de cor obrigatória antes de tiragem
+- Sangra: 3mm em todos os bordas
+- Couché fosco 250g (capa) / 170g (miolo) / offset 90g (papel timbrado)
+- Lima `#62BB46` em CMYK pode tender ao amarelo se separação errada — **sempre fazer prova**
+
+### Tinção da foto: matriz de decisão
+
+| Cenário | Overlay | Quando |
+|---|---|---|
+| Foto bem iluminada, coerente | nenhum (0%) | Foto é hero absoluto |
+| Foto bem iluminada com áreas muito claras | `{colors.overlay-green}` 20% | Suaviza highlights, ganha legibilidade |
+| Conjunto de fotos de múltiplas fontes | `{colors.overlay-green}` 30% | Unifica, aumenta coerência |
+| Foto escura, baixo contraste | `{colors.overlay-green}` 35% | Reforça identidade visual |
+| Story 9:16 padrão | `{colors.overlay-green}` 30% | Composição vertical com mais texto sobre foto |
+
+### Badge 35 anos: matriz de fundo
+
+| Sobre... | Variante | Justificativa |
+|---|---|---|
+| Fundo claro / off-white | outline `{colors.primary}` (verde escuro) | Contraste natural, identidade institucional |
+| Fundo verde escuro Cipasa | outline `{colors.white}` | Inversão clara |
+| Foto clara (sem círculo orgânico) | outline `{colors.white}` com fundo escuro 30% | Garante legibilidade |
+| Dentro do círculo orgânico branco | outline `{colors.primary}` | Mesmo da regra para fundo claro |
+| Foto média/escura | outline `{colors.white}` | Sem fundo extra (testar legibilidade) |

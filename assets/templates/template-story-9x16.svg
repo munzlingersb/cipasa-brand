@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="t d">
+  <title id="t">Template Story 9:16 — Layouts B/C</title>
+  <desc id="d">Grid de criação para story vertical 1080×1920 com áreas de UI Instagram (topo/base), círculo orgânico, headline, badges de dados, CTA, wave strip e logos rodapé.</desc>
+
+  <defs>
+    <style>
+      .canvas { fill: #F8FAF9; }
+      .ui-zone { fill: #FF6B6B; opacity: 0.12; }
+      .safe-zone { fill: none; stroke: #62BB46; stroke-width: 2; stroke-dasharray: 4 4; }
+      .circle-pos { fill: none; stroke: #62BB46; stroke-width: 2; opacity: 0.55; }
+      .area-label { fill: #005A45; font-family: 'Work Sans', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+      .label-mini { fill: #555454; font-family: 'Work Sans', sans-serif; font-size: 13px; }
+      .ui-warn { fill: #C0392B; font-family: 'Work Sans', sans-serif; font-size: 14px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect class="canvas" width="1080" height="1920"/>
+
+  <!-- UI zones do Instagram (não colocar texto crítico aqui) -->
+  <rect class="ui-zone" x="0" y="0" width="1080" height="200"/>
+  <text class="ui-warn" x="60" y="40">UI INSTAGRAM TOPO</text>
+  <text class="label-mini" x="60" y="62">200px reservado para nome/foto perfil. Não colocar texto crítico.</text>
+
+  <rect class="ui-zone" x="0" y="1640" width="1080" height="280"/>
+  <text class="ui-warn" x="60" y="1672">UI INSTAGRAM BASE</text>
+  <text class="label-mini" x="60" y="1694">280px reservado para botão "Enviar mensagem". Texto seguro até y=1640.</text>
+
+  <!-- Margem de segurança lateral -->
+  <rect class="safe-zone" x="60" y="200" width="960" height="1440"/>
+  <text class="area-label" x="76" y="226">SAFE ZONE</text>
+
+  <!-- Círculo orgânico (top-right) -->
+  <circle class="circle-pos" cx="1080" cy="200" r="420"/>
+  <text class="label-mini" x="800" y="240">círculo top-right · raio 420px (story)</text>
+
+  <!-- Logo Verana (dentro do círculo) -->
+  <rect x="800" y="240" width="240" height="90" fill="#005A45" opacity="0.1"/>
+  <text class="area-label" x="816" y="266">LOGO</text>
+  <text class="label-mini" x="816" y="288">65px altura · dentro do círculo</text>
+
+  <!-- Headline 3 linhas -->
+  <rect x="60" y="380" width="700" height="200" fill="#005A45" opacity="0.08"/>
+  <text class="area-label" x="76" y="408">HEADLINE BLOCK</text>
+  <text class="label-mini" x="76" y="432">Linha 1 — Work Sans 400 · 28px · light</text>
+  <text class="label-mini" x="76" y="452">Linha 2 — Work Sans 700 · 34px · medium</text>
+  <text class="label-mini" x="76" y="472">Linha 3 — Work Sans 900 · 40px · bold</text>
+
+  <!-- 3 badges empilhados -->
+  <rect x="60" y="620" width="540" height="380" fill="#62BB46" opacity="0.08"/>
+  <text class="area-label" x="76" y="650">DATA BADGES (3 stacked)</text>
+  <text class="label-mini" x="76" y="675">cada badge: 540×100px · gap 16px · lima fill</text>
+  <text class="label-mini" x="76" y="695">[ícone 28px] + [label 14px / número 44-52px Work Sans 900]</text>
+
+  <!-- Mockup das badges -->
+  <rect x="76" y="710" width="500" height="80" rx="14" fill="#62BB46" opacity="0.5"/>
+  <rect x="76" y="800" width="500" height="80" rx="14" fill="#62BB46" opacity="0.5"/>
+  <rect x="76" y="890" width="500" height="80" rx="14" fill="#62BB46" opacity="0.5"/>
+
+  <!-- CTA -->
+  <rect x="60" y="1040" width="500" height="60" fill="#005A45" opacity="0.1"/>
+  <text class="area-label" x="76" y="1066">CTA TEXT</text>
+  <text class="label-mini" x="76" y="1085">"Agende sua visita." · lima medium</text>
+
+  <!-- Wave strip diagonal -->
+  <path d="M 0 1620 L 0 1500 L 600 1430 L 600 1550 Z" fill="#62BB46" opacity="0.35"/>
+  <text class="label-mini" x="60" y="1488">wave strip lima · -12° · canto inf-esq</text>
+
+  <!-- Footer logos -->
+  <rect x="280" y="1560" width="520" height="60" fill="#005A45" opacity="0.1"/>
+  <text class="area-label" x="296" y="1586">FOOTER LOGOS</text>
+  <text class="label-mini" x="296" y="1606">VERANA + CIPASA 35 anos · centralizados</text>
+</svg>

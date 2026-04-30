@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-labelledby="t d">
+  <title id="t">Template Feed 1:1 — Layouts A/B/D</title>
+  <desc id="d">Grid de criação para feed 1:1 com guias do círculo orgânico nas 6 posições, áreas seguras de texto, posição de logo e badge.</desc>
+
+  <defs>
+    <style>
+      .canvas { fill: #F8FAF9; }
+      .guide-bg { fill: #E8EDEB; opacity: 0.6; }
+      .guide-stroke { fill: none; stroke: #94A09B; stroke-width: 2; stroke-dasharray: 8 8; }
+      .circle-pos { fill: none; stroke: #62BB46; stroke-width: 2; opacity: 0.55; }
+      .label-text { fill: #112A25; font-family: 'Work Sans', sans-serif; font-size: 18px; font-weight: 600; }
+      .label-mini { fill: #555454; font-family: 'Work Sans', sans-serif; font-size: 13px; }
+      .safe-zone { fill: none; stroke: #62BB46; stroke-width: 2; stroke-dasharray: 4 4; }
+      .area-label { fill: #005A45; font-family: 'Work Sans', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    </style>
+  </defs>
+
+  <rect class="canvas" width="1080" height="1080"/>
+
+  <!-- Margem de segurança 60px de cada borda -->
+  <rect class="safe-zone" x="60" y="60" width="960" height="960"/>
+  <text class="area-label" x="76" y="86">SAFE ZONE · margin 60px</text>
+
+  <!-- Marcações do círculo orgânico nas 6 posições (raio 480px) -->
+  <g id="circle-positions" opacity="0.7">
+    <!-- Top-right (padrão) -->
+    <circle class="circle-pos" cx="1080" cy="0" r="480"/>
+    <text class="label-mini" x="800" y="40">center (1080, 0) · top-right · padrão</text>
+    <!-- Top-left -->
+    <circle class="circle-pos" cx="0" cy="0" r="480"/>
+    <text class="label-mini" x="100" y="40">top-left</text>
+    <!-- Bottom-right -->
+    <circle class="circle-pos" cx="1080" cy="1080" r="480"/>
+    <text class="label-mini" x="800" y="1058">bottom-right</text>
+    <!-- Bottom-left -->
+    <circle class="circle-pos" cx="0" cy="1080" r="480"/>
+    <text class="label-mini" x="100" y="1058">bottom-left</text>
+    <!-- Right-center -->
+    <circle class="circle-pos" cx="1080" cy="540" r="480"/>
+    <text class="label-mini" x="930" y="540">right</text>
+    <!-- Left-center -->
+    <circle class="circle-pos" cx="0" cy="540" r="480"/>
+    <text class="label-mini" x="40" y="540">left</text>
+  </g>
+
+  <!-- Área de keyword (centro/baixo dominante) -->
+  <rect x="60" y="780" width="650" height="200" fill="#62BB46" opacity="0.08"/>
+  <text class="area-label" x="76" y="810">KEYWORD AREA</text>
+  <text class="label-mini" x="76" y="835">Work Sans 900 italic · 90-96px · #62BB46 ou white</text>
+  <text class="label-mini" x="76" y="855">"clube" / "diferença" / "consciente"</text>
+
+  <!-- Área de suporte (acima da keyword) -->
+  <rect x="60" y="700" width="650" height="70" fill="#005A45" opacity="0.08"/>
+  <text class="area-label" x="76" y="722">SUPPORT TEXT</text>
+  <text class="label-mini" x="76" y="745">Work Sans 400 · 22-26px · branco</text>
+
+  <!-- Área de logo (dentro do círculo top-right) -->
+  <rect x="800" y="60" width="220" height="80" fill="#005A45" opacity="0.1"/>
+  <text class="area-label" x="816" y="84">LOGO</text>
+  <text class="label-mini" x="816" y="105">VERANA · 65px alt · dentro do círculo</text>
+
+  <!-- Área de badge 35 anos (rodapé apenas em closing) -->
+  <rect x="380" y="990" width="320" height="60" fill="#20592D" opacity="0.1"/>
+  <text class="area-label" x="396" y="1012">CIPASA 35 ANOS BADGE</text>
+  <text class="label-mini" x="396" y="1032">opcional · só em closing card</text>
+</svg>

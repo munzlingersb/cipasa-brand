@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 1190 840" role="img" aria-labelledby="t d">
+  <title id="t">Template Folder A4 — dobrado em 3</title>
+  <desc id="d">Folder A4 horizontal (297×210mm) dobrado em 3 painéis iguais. Frente/Miolo/Verso. Marcações de dobra, sangra 3mm, áreas de texto e imagem.</desc>
+
+  <defs>
+    <style>
+      .canvas { fill: #F8FAF9; }
+      .panel-bg { fill: #FFFFFF; }
+      .fold { stroke: #62BB46; stroke-width: 1; stroke-dasharray: 4 4; }
+      .bleed { stroke: #FF6B6B; stroke-width: 0.5; stroke-dasharray: 2 2; fill: none; }
+      .safe-zone { stroke: #94A09B; stroke-width: 1; stroke-dasharray: 2 2; fill: none; }
+      .area-label { fill: #005A45; font-family: 'Work Sans', sans-serif; font-size: 16px; font-weight: 700; }
+      .label-mini { fill: #555454; font-family: 'Work Sans', sans-serif; font-size: 11px; }
+      .panel-num { fill: #62BB46; font-family: 'Work Sans', sans-serif; font-size: 32px; font-weight: 900; opacity: 0.4; }
+    </style>
+  </defs>
+
+  <rect class="canvas" width="1190" height="840"/>
+
+  <!-- Sangra 3mm = 12px @ 100dpi -->
+  <rect class="bleed" x="0" y="0" width="1190" height="840"/>
+
+  <!-- 3 painéis (cada um 396×840) -->
+  <g id="panel-1">
+    <rect class="panel-bg" x="0" y="0" width="396" height="840"/>
+    <text class="panel-num" x="20" y="50">1</text>
+    <text class="area-label" x="20" y="80">VERSO (quando aberto)</text>
+    <text class="label-mini" x="20" y="100">Mapa, dados técnicos, FAQ</text>
+    <rect class="safe-zone" x="20" y="120" width="356" height="700"/>
+  </g>
+
+  <g id="panel-2">
+    <rect class="panel-bg" x="396" y="0" width="396" height="840"/>
+    <text class="panel-num" x="416" y="50">2</text>
+    <text class="area-label" x="416" y="80">MIOLO</text>
+    <text class="label-mini" x="416" y="100">Headline + foto principal · grid de amenidades</text>
+    <rect class="safe-zone" x="416" y="120" width="356" height="700"/>
+  </g>
+
+  <g id="panel-3">
+    <rect class="panel-bg" x="792" y="0" width="396" height="840"/>
+    <text class="panel-num" x="812" y="50">3</text>
+    <text class="area-label" x="812" y="80">CAPA</text>
+    <text class="label-mini" x="812" y="100">Logo Verana + headline emocional + foto hero</text>
+    <rect class="safe-zone" x="812" y="120" width="356" height="700"/>
+  </g>
+
+  <!-- Linhas de dobra -->
+  <line class="fold" x1="396" y1="0" x2="396" y2="840"/>
+  <line class="fold" x1="792" y1="0" x2="792" y2="840"/>
+  <text class="label-mini" x="370" y="-10" transform="translate(0,840)">DOBRA</text>
+
+  <!-- Specs -->
+  <text class="label-mini" x="20" y="830">A4 horizontal 297×210mm · sangra 3mm · couché fosco 250g · dobrar em 3</text>
+</svg>

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cipasa Heritage — Brand in Action</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700;1,900&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #005A45;
+  --primary-deep: #112A25;
+  --primary-hover: #173F35;
+  --accent: #62BB46;
+  --neutral: #F8FAF9;
+  --ink: #2C2C2C;
+  --muted: #555454;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Work Sans', system-ui, sans-serif;
+  background: var(--neutral);
+  color: var(--ink);
+  line-height: 1.5;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 32px; }
+header { padding: 96px 32px 48px; border-bottom: 1px solid #e5e7e6; background: #fff; }
+header .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+header h1 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 56px; line-height: 1.1; color: var(--primary-deep); margin-top: 16px; }
+header .lead { color: var(--muted); margin-top: 16px; font-size: 18px; max-width: 640px; }
+header .links { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
+header .links a { font-size: 13px; color: var(--primary); text-decoration: none; padding: 8px 16px; border: 1px solid var(--primary); border-radius: 14px; }
+header .links a:hover { background: var(--primary); color: white; }
+
+section { padding: 64px 0; border-bottom: 1px solid #e5e7e6; }
+section:last-child { border-bottom: 0; }
+h2 { font-family: 'Work Sans'; font-weight: 700; font-size: 32px; color: var(--primary-deep); margin-bottom: 8px; }
+h2 .num { color: var(--accent); margin-right: 12px; font-style: italic; }
+section .desc { color: var(--muted); margin-bottom: 32px; max-width: 720px; }
+
+h3 { font-family: 'Work Sans'; font-weight: 700; font-size: 18px; color: var(--primary-deep); margin: 32px 0 16px; }
+
+.grid { display: grid; gap: 16px; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+
+.card {
+  background: white; border: 1px solid #e5e7e6; border-radius: 14px;
+  overflow: hidden; transition: transform 0.2s;
+}
+.card:hover { transform: translateY(-2px); }
+.card .img-wrap { aspect-ratio: 1; overflow: hidden; background: #f0f3f1; }
+.card .img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card .img-wrap.tall { aspect-ratio: 9/16; }
+.card .img-wrap.wide { aspect-ratio: 16/9; }
+.card .img-wrap.outdoor { aspect-ratio: 8/3; }
+.card .info { padding: 16px; }
+.card .info .name { font-weight: 600; font-size: 14px; color: var(--ink); }
+.card .info .meta { font-size: 12px; color: var(--muted); margin-top: 4px; font-family: ui-monospace, monospace; }
+
+.template-card { background: #fff; border: 1px solid #e5e7e6; border-radius: 14px; padding: 24px; text-align: center; }
+.template-card .ico { font-size: 32px; margin-bottom: 12px; color: var(--accent); }
+.template-card .name { font-weight: 600; font-size: 14px; color: var(--ink); }
+.template-card .meta { font-size: 11px; color: var(--muted); margin-top: 4px; font-family: ui-monospace, monospace; }
+.template-card a { display: block; text-decoration: none; color: inherit; }
+
+footer { padding: 64px 32px; text-align: center; color: var(--muted); font-size: 13px; }
+footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container" style="padding: 0;">
+    <span class="eyebrow">Brand in Action</span>
+    <h1>A marca em prática.</h1>
+    <p class="lead">Catálogo visual de aplicações reais da identidade Cipasa — criativos digitais, materiais físicos, merchandise e referências fotográficas.</p>
+    <div class="links">
+      <a href="index.html">← Voltar ao Brandbook</a>
+      <a href="CREATIVES.md">CREATIVES.md</a>
+      <a href="PHYSICAL.md">PHYSICAL.md</a>
+      <a href="PHOTO.md">PHOTO.md</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<section>
+  <h2><span class="num">01</span>Criativos digitais</h2>
+  <p class="desc">Aplicações reais em mídia paga e orgânica. Layouts seguindo os 4 sistemas (A, B, C, D) descritos em <a href="CREATIVES.md">CREATIVES.md</a>.</p>
+
+  <h3>Key visuals de campanha</h3>
+  <div class="grid grid-2">
+    <div class="card"><div class="img-wrap"><img src="assets/brand/key-visual-campanha.jpg" alt=""></div><div class="info"><div class="name">Key visual da campanha 35 anos</div><div class="meta">layout B · "diferença" como hero</div></div></div>
+    <div class="card"><div class="img-wrap"><img src="assets/brand/key-visual-mote.jpg" alt=""></div><div class="info"><div class="name">Key visual do mote</div><div class="meta">aplicação editorial · capa de folder</div></div></div>
+  </div>
+
+  <h3>Aplicações em mídia</h3>
+  <div class="grid grid-3">
+    <div class="card"><div class="img-wrap"><img src="assets/brand/aplicacao-redes-sociais.jpg" alt=""></div><div class="info"><div class="name">Posts Instagram/Facebook</div><div class="meta">grid 1:1 · feed</div></div></div>
+    <div class="card"><div class="img-wrap tall"><img src="assets/brand/aplicacao-stories.jpg" alt=""></div><div class="info"><div class="name">Stories WhatsApp/Instagram</div><div class="meta">9:16 · com faixa wave lima</div></div></div>
+    <div class="card"><div class="img-wrap"><img src="assets/brand/criativos-amenidades-carousel.jpg" alt=""></div><div class="info"><div class="name">Carrossel de amenidades</div><div class="meta">layout A · keyword cards</div></div></div>
+    <div class="card"><div class="img-wrap"><img src="assets/brand/criativos-verana-grid.jpg" alt=""></div><div class="info"><div class="name">Grid de criativos Verana</div><div class="meta">variações de copy</div></div></div>
+    <div class="card"><div class="img-wrap"><img src="assets/brand/criativos-whatsapp-stories.jpg" alt=""></div><div class="info"><div class="name">Stories WhatsApp</div><div class="meta">9:16 · "diferença" + dados</div></div></div>
+    <div class="card"><div class="img-wrap"><img src="assets/brand/comunicacao-interna.jpg" alt=""></div><div class="info"><div class="name">Comunicação interna</div><div class="meta">aplicação cultura organizacional</div></div></div>
+  </div>
+
+  <h3>Criativos publicados (Wave Fevereiro)</h3>
+  <div class="grid grid-3">
+    <div class="card"><div class="img-wrap"><img src="assets/ads/MAR/MAR-FEV-01-F.png" alt=""></div><div class="info"><div class="name">Feed 01</div><div class="meta">[MAR][FEV][01][F]</div></div></div>
+    <div class="card"><div class="img-wrap tall"><img src="assets/ads/MAR/MAR-FEV-01-S.png" alt=""></div><div class="info"><div class="name">Story 01</div><div class="meta">[MAR][FEV][01][S]</div></div></div>
+    <div class="card"><div class="img-wrap"><img src="assets/ads/MAR/MAR-FEV-02-F.png" alt=""></div><div class="info"><div class="name">Feed 02</div><div class="meta">[MAR][FEV][02][F]</div></div></div>
+    <div class="card"><div class="img-wrap tall"><img src="assets/ads/MAR/MAR-FEV-02-S.png" alt=""></div><div class="info"><div class="name">Story 02</div><div class="meta">[MAR][FEV][02][S]</div></div></div>
+    <div class="card"><div class="img-wrap"><img src="assets/ads/MAR/MAR-FEV-03-F.png" alt=""></div><div class="info"><div class="name">Feed 03</div><div class="meta">[MAR][FEV][03][F]</div></div></div>
+    <div class="card"><div class="img-wrap tall"><img src="assets/ads/MAR/MAR-FEV-03-S.png" alt=""></div><div class="info"><div class="name">Story 03</div><div class="meta">[MAR][FEV][03][S]</div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">02</span>Templates de layout</h2>
+  <p class="desc">6 grids SVG editáveis com guides, safe zones e marcação de elementos. Use como base no Figma ou Inkscape. Detalhes em <a href="CREATIVES.md">CREATIVES.md</a> e <a href="PHYSICAL.md">PHYSICAL.md</a>.</p>
+
+  <div class="grid grid-3">
+    <div class="template-card"><a href="assets/templates/template-feed-1x1.svg"><div class="ico">▢</div><div class="name">Feed 1:1</div><div class="meta">1080×1080 · A/B/D</div></a></div>
+    <div class="template-card"><a href="assets/templates/template-story-9x16.svg"><div class="ico">▯</div><div class="name">Story 9:16</div><div class="meta">1080×1920 · B/C</div></a></div>
+    <div class="template-card"><a href="assets/templates/template-outdoor-8x3.svg"><div class="ico">▭</div><div class="name">Outdoor 8:3</div><div class="meta">4800×1800 · billboard</div></a></div>
+    <div class="template-card"><a href="assets/templates/template-folder-a4.svg"><div class="ico">▤</div><div class="name">Folder A4</div><div class="meta">297×210mm · 3 dobras</div></a></div>
+    <div class="template-card"><a href="assets/templates/template-cartao-visita.svg"><div class="ico">▮</div><div class="name">Cartão de visita</div><div class="meta">90×50mm</div></a></div>
+    <div class="template-card"><a href="assets/templates/template-papel-timbrado.svg"><div class="ico">▦</div><div class="name">Papel timbrado</div><div class="meta">A4 · header + footer</div></a></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">03</span>Aplicações físicas</h2>
+  <p class="desc">Outdoor, folder, sinalização e materiais impressos. Direção completa em <a href="PHYSICAL.md">PHYSICAL.md</a>.</p>
+
+  <h3>Outdoor / Mídia OOH</h3>
+  <div class="grid grid-2">
+    <div class="card"><div class="img-wrap outdoor"><img src="assets/brand/aplicacao-outdoor-billboard.jpg" alt=""></div><div class="info"><div class="name">Billboard horizontal</div><div class="meta">8m × 3m · proporção 8:3</div></div></div>
+    <div class="card"><div class="img-wrap tall"><img src="assets/brand/aplicacao-outdoor.jpg" alt=""></div><div class="info"><div class="name">Outdoor vertical</div><div class="meta">3m × 6m · empena/fachada</div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">04</span>Merchandise — Kit 35 anos</h2>
+  <p class="desc">Conjunto comemorativo distribuído internamente e em eventos. Specs técnicas em <a href="PHYSICAL.md">PHYSICAL.md</a>.</p>
+
+  <div class="grid grid-3">
+    <div class="card"><div class="img-wrap"><img src="assets/brand/merch-camiseta.jpg" alt=""></div><div class="info"><div class="name">Camiseta preta</div><div class="meta">algodão 180g · DTF</div></div></div>
+    <div class="card"><div class="img-wrap"><img src="assets/brand/merch-caneca.jpg" alt=""></div><div class="info"><div class="name">Caneca branca</div><div class="meta">cerâmica 350ml · sublimação</div></div></div>
+    <div class="card"><div class="img-wrap"><img src="assets/brand/merch-caderno-ecobag.jpg" alt=""></div><div class="info"><div class="name">Caderno + Ecobag</div><div class="meta">A5 capa dura + algodão cru</div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">05</span>Direção fotográfica</h2>
+  <p class="desc">Banco de referências aprovadas. Cada foto exemplifica o padrão Cipasa: photo-first, mood quente, composição editorial. Briefing completo em <a href="PHOTO.md">PHOTO.md</a>.</p>
+
+  <div class="grid grid-3">
+    <div class="card"><div class="img-wrap"><img src="assets/photography/lifestyle-familia-key-visual.jpg" alt=""></div><div class="info"><div class="name">Lifestyle — família key visual</div><div class="meta">golden hour · família real</div></div></div>
+    <div class="card"><div class="img-wrap"><img src="assets/photography/aerial-empreendimento-outdoor.jpg" alt=""></div><div class="info"><div class="name">Aérea — empreendimento</div><div class="meta">drone 80-150m · golden hour</div></div></div>
+    <div class="card"><div class="img-wrap tall"><img src="assets/photography/lifestyle-stories-vertical.jpg" alt=""></div><div class="info"><div class="name">Lifestyle — story vertical</div><div class="meta">9:16 · com faixa wave</div></div></div>
+    <div class="card"><div class="img-wrap"><img src="assets/photography/amenidades-grid-9up.jpg" alt=""></div><div class="info"><div class="name">Amenidades — grid 9 up</div><div class="meta">cards de áreas comuns</div></div></div>
+    <div class="card"><div class="img-wrap"><img src="assets/photography/lifestyle-mote-diferenca.jpg" alt=""></div><div class="info"><div class="name">Lifestyle — mote "diferença"</div><div class="meta">layout B · racional</div></div></div>
+  </div>
+
+  <p style="margin-top: 24px; font-size: 13px; color: var(--muted);">
+    Banco em expansão. Lista de fotos prioritárias para próximo shoot em <a href="assets/photography/README.md">assets/photography/README.md</a>.
+  </p>
+</section>
+
+<section>
+  <h2><span class="num">06</span>Identidade visual estabelecida</h2>
+  <p class="desc">Capa, logos e iconografia já aplicados.</p>
+
+  <div class="grid grid-3">
+    <div class="card"><div class="img-wrap"><img src="assets/brand/capa.jpg" alt=""></div><div class="info"><div class="name">Capa do brandbook 35 anos</div><div class="meta">aplicação principal</div></div></div>
+    <div class="card"><div class="img-wrap"><img src="assets/brand/logo-variacoes.jpg" alt=""></div><div class="info"><div class="name">Variações de logo</div><div class="meta">color · branco · mono</div></div></div>
+    <div class="card"><div class="img-wrap"><img src="assets/brand/iconografia.jpg" alt=""></div><div class="info"><div class="name">Iconografia do sistema</div><div class="meta">6 ícones em traço linear</div></div></div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <p>Cipasa Heritage · Identidade visual · 2026 · alpha</p>
+  <p style="margin-top: 8px;">
+    <a href="index.html">Brandbook</a> ·
+    <a href="DESIGN.md">DESIGN.md</a> ·
+    <a href="BRAND.md">BRAND.md</a> ·
+    <a href="LOGOS.md">LOGOS.md</a> ·
+    <a href="CREATIVES.md">CREATIVES.md</a> ·
+    <a href="PHYSICAL.md">PHYSICAL.md</a> ·
+    <a href="PHOTO.md">PHOTO.md</a>
+  </p>
+</footer>
+
+</body>
+</html>

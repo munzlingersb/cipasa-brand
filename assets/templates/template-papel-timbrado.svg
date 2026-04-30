@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 840 1190" role="img" aria-labelledby="t d">
+  <title id="t">Template Papel Timbrado A4</title>
+  <desc id="d">Papel timbrado A4 com cabeçalho (logo Cipasa) e rodapé (dados de contato + endereço).</desc>
+
+  <defs>
+    <style>
+      .canvas { fill: #FFFFFF; }
+      .accent { fill: #62BB46; }
+      .text-primary { fill: #005A45; font-family: 'Work Sans', sans-serif; }
+      .text-muted { fill: #555454; font-family: 'Work Sans', sans-serif; }
+      .label-mini { fill: #94A09B; font-family: 'Work Sans', sans-serif; font-size: 9px; }
+      .safe-zone { stroke: #94A09B; stroke-width: 0.5; stroke-dasharray: 2 2; fill: none; }
+      .header-bg { fill: #F8FAF9; }
+    </style>
+  </defs>
+
+  <rect class="canvas" width="840" height="1190"/>
+
+  <!-- Header (logo) -->
+  <rect class="header-bg" x="0" y="0" width="840" height="120"/>
+  <rect x="60" y="35" width="220" height="50" fill="#005A45" opacity="0.1"/>
+  <text class="text-primary" font-size="13" font-weight="700" x="68" y="68">[CIPASA URBANISMO LOGO]</text>
+
+  <!-- Faixa lima superior (separador) -->
+  <rect class="accent" x="0" y="120" width="840" height="3"/>
+
+  <!-- Área de conteúdo -->
+  <rect class="safe-zone" x="60" y="160" width="720" height="900"/>
+  <text class="text-muted" font-size="11" x="76" y="190">[ ÁREA DE CONTEÚDO — texto da carta/comunicado ]</text>
+  <text class="label-mini" x="76" y="220">Margens: 60px laterais · 160px topo · 130px base</text>
+  <text class="label-mini" x="76" y="240">Tipografia: Work Sans 11pt regular para corpo</text>
+
+  <!-- Faixa lima inferior -->
+  <rect class="accent" x="0" y="1067" width="840" height="3"/>
+
+  <!-- Footer (dados) -->
+  <rect class="header-bg" x="0" y="1070" width="840" height="120"/>
+  <text class="text-primary" font-size="10" font-weight="700" x="60" y="1100">CIPASA URBANISMO</text>
+  <text class="text-muted" font-size="9" x="60" y="1115">35 anos fazendo bem feito.</text>
+  <text class="text-muted" font-size="9" x="60" y="1140">contato@cipasa.com.br · +55 11 9999 9999</text>
+  <text class="text-muted" font-size="9" x="60" y="1155">Endereço completo · CNPJ · cipasa.com.br</text>
+
+  <!-- Specs -->
+  <text class="label-mini" x="600" y="1180">A4 210×297mm · papel offset 90g</text>
+</svg>
